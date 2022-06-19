@@ -154,7 +154,7 @@
         width: 18rem;
         top: 0;
         right: 0rem;
-        display: none;
+        display:none;
         flex-direction: column;
         background-color: var(--color-primario);
 
@@ -183,9 +183,10 @@
         animation-name: abriendo-menu;
     }
     .menu-cerrado{
-        animation-duration: 0.5s;
-        animation-name: cerrando-menu;
+        display: flex;
+        right: -18rem;
     }
+
     .nombre-redes{
         display: flex;
         color: var(--color-texto-secundario);
@@ -222,14 +223,11 @@
     }
     
     @keyframes abriendo-menu {
-        0%{right: -15rem;}
+        0%{right: -18rem;}
         100%{right: 0;}
     }
 
-    @keyframes cerrando-menu {
-        0%{right: 0;}
-        100%{right: -15rem;}
-    }
+
 }
 
 @media only screen and (max-width: 400px){
@@ -340,6 +338,11 @@
         height: 2rem;
         width: 2rem
     }
-    
+    @keyframes abriendo-menu {
+        0%{right: -15rem;}
+        100%{right: 0;}
+    }
+
+
 
 }
