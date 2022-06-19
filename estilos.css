@@ -51,7 +51,7 @@
     width: 80%;
     height: 60%;
     max-width: 13rem;
-    max-height: height:var(--HeaderFooter-Size);
+    max-height: var(--HeaderFooter-Size);
 }
 
 .nombre_curso{
@@ -151,7 +151,8 @@
     .social-bar {
         margin: 0;
         position: absolute;
-        width: 18rem;
+        width: 40%;
+        max-width: 18rem;
         top: 0;
         right: 0rem;
         display:none;
@@ -179,13 +180,14 @@
     }
     .menu-abierto{
         display: flex;
-        animation-duration: 0.5s;
+        animation-duration: 0.8s;
         animation-name: abriendo-menu;
     }
-    .menu-cerrado{
-        display: flex;
-        right: -18rem;
-    }
+    /* .menu-cerrado{
+        
+        animation-duration: 0.8s;
+        animation-name: cerrando-menu;
+    } */
 
     .nombre-redes{
         display: flex;
@@ -223,9 +225,14 @@
     }
     
     @keyframes abriendo-menu {
-        0%{right: -18rem;}
-        100%{right: 0;}
+        0%{width:0;}
+        100%{width:40%;}
     }
+/* 
+    @keyframes cerrando-menu {
+        0%{width:40%;}
+        100%{width:0;}
+    } */
 
 
 }
@@ -263,6 +270,7 @@
     .social-section{
         
         width: 40%;
+        max-width: 15rem;
         height: 4rem;
         display: flex;
         justify-content: flex-end;
@@ -272,7 +280,8 @@
         
         /* margin: 0;
         position: absolute; */
-        width: 15rem;
+        width: 70%;
+        max-width: 15rem;
         /* top: 0;
         right: 0rem;
         display: none;
@@ -339,8 +348,8 @@
         width: 2rem
     }
     @keyframes abriendo-menu {
-        0%{right: -15rem;}
-        100%{right: 0;}
+        0%{width:0;}
+        100%{width: 70%;}
     }
 
 

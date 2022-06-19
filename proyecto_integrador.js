@@ -5,7 +5,7 @@ const redesSociales = document.querySelector(".social-bar");
 function abrir() {
 
     redesSociales.classList.toggle("menu-abierto");
-    redesSociales.classList.remove("menu-cerrado");
+    // redesSociales.classList.remove("menu-cerrado");
     
 
 
@@ -14,8 +14,8 @@ function abrir() {
 function cerrar() {
 
     redesSociales.classList.remove("menu-abierto");
-    redesSociales.classList.add("menu-cerrado");
-    redesSociales.style.transition="right 0.5s";
+    // redesSociales.classList.add("menu-cerrado");
+    // redesSociales.style.transition="width 0.5s";
 
 }
 
