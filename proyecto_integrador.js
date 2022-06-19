@@ -5,6 +5,7 @@ const redesSociales = document.querySelector(".social-bar");
 function abrir() {
 
     redesSociales.classList.toggle("menu-abierto");
+    
 
 
 
