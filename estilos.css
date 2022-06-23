@@ -313,8 +313,8 @@
         100%{width: 70%;}
     }
 }
-
-/* ESTILOS DEL BANNER (MOBILE FIRST) */
+/* (MOBILE FIRST) */
+/* ESTILOS DEL BANNER */
 
 .banner-container{
     background-color: var(--color-secundario);
@@ -322,7 +322,7 @@
     width: 100%;
     height: 35vh;
     max-height: 600px;
-    top: var(--HeaderFooter-Size);
+    /* top: var(--HeaderFooter-Size); */
     /* z-index: 100; */
 }
 .banner-img{
@@ -351,25 +351,7 @@
     height: 10px;
 } */
 
-/* ESTILOS DEL BANNER (escritorio) */
-@media only screen   and (min-width: 769px){
-    .banner-container{
-        /* background-color: var(--color-secundario);
-        position: relative;
-        width: 100%; */
-        height: 50vh;
-        /* top: var(--HeaderFooter-Size); */
-    }
-    .banner-img{
-        /* height: 100%; */
-        /* width: 100%;
-        position: absolute;*/
-        object-position: 80% 75%;
-        object-fit: cover; 
-    }
-}
-
-/* ESTILOS DE LA FOTO DE PERFIL (MOBILE FIRST) */
+/* ESTILOS DE LA FOTO DE PERFIL  */
 
 .foto-container{
     position: relative;
@@ -382,7 +364,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    /* top: -15vh; */
+    /* top: -7rem; */
     z-index: 100;
 }
 .foto-container img{
@@ -393,21 +375,10 @@
     border: var(--color-secundario) solid 2px;
     object-fit: cover;
 }
-/* ESTILOS DE LA FOTO DE PERFIL (escritorio) */
-@media only screen   and (min-width: 769px){
-.foto-container{
-    /* margin-left: 3vw; */
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 250px;
-    max-height: 250px;
-    /* top: -15vh; */
 
-}
-}
-/* ESTILOS DE ACERCA DE (MOBILE FIRST) */
+/* ESTILOS DE ACERCA DE */
 .acerca-de-section{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: max-content;
     background-color: var(--color-secundario);
@@ -441,48 +412,83 @@
     margin: 2.5rem auto;
 }
 
-@media only screen   and (min-width: 769px){
-    .acerca-de-section{
-        display: flex;
-        justify-content: space-between;
-        height: min-content;
-        padding: 1.5rem;
-        top: calc(50vh + var(--HeaderFooter-Size));
-        /* overflow: hidden; */
-        text-align:start;
-    }
-    .acerca-de-nombre{
-        /* margin: 1rem auto 1rem 6.5vw; */
-        margin: 0.5rem auto;
-    }
-    .acerca-de-titulo{
-        /* margin: 1rem auto 1rem 5.5vw; */
-        margin: 0.5rem auto;
-    }
-    .titulo-nombre-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .acerca-de-info{
-        align-self: center;
-        /* text-align: center; */
-        width: 60vw;
+/* ESTILOS DE LA SECCION DE EXPERIENCIA */
 
-    }
-    .acerca-de-membrete{
+
+/* ESCRITORIO */
+/* ESTILOS DEL BANNER */
+@media only screen   and (min-width: 769px){
+    .banner-container{
+        /* background-color: var(--color-secundario);
         position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 40vw;
-        justify-content: flex-end;
-        align-items: center;
-        margin-right: auto;
-        z-index: 150;
+        width: 100%; */
+        height: 45vh;
+        /* top: var(--HeaderFooter-Size); */
     }
+    .banner-img{
+        /* height: 100%; */
+        /* width: 100%;
+        position: absolute;*/
+        object-position: 80% 75%;
+        object-fit: cover; 
+    }
+
+/* ESTILOS DE LA FOTO DE PERFIL */
+.foto-container{
+    /* margin-left: 3vw; */
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    /* top: -15vh; */
 }
+
+.acerca-de-section{
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+    padding: 1.5rem;
+    /* top: calc(50vh + var(--HeaderFooter-Size)); */
+    /* overflow: hidden; */
+    text-align:start;
+}
+.acerca-de-nombre{
+    /* margin: 1rem auto 1rem 6.5vw; */
+    margin: 0.5rem auto;
+}
+.acerca-de-titulo{
+    /* margin: 1rem auto 1rem 5.5vw; */
+    margin: 0.5rem auto;
+}
+.titulo-nombre-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.acerca-de-info{
+    align-self: center;
+    /* text-align: center; */
+    width: 60vw;
+
+}
+.acerca-de-membrete{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: auto;
+    z-index: 150;
+}
+
+}
+
+
+/* ESCRITORIO WIDE */
 @media only screen   and (min-width: 996px){
 
+/* ESTILOS DE ACERCA DE WIDE */
     .acerca-de-membrete{
         /* position: relative; */
         display: flex;
