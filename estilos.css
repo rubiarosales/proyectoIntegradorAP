@@ -13,9 +13,15 @@
     --color-texto-primario:#000000;
     --color-texto-secundario:#ffffff;
     --color-decoracion:#ffffff;
-    --fontsize-titulos: 3.5rem;
+    --fontsize-titulos: 3rem;
     --fontsize-subtitulos: 2.5rem;
     --fontsize-contenido: 1.8rem;
+    --fontsize-titulos-responsive: 3.5rem;
+    --fontsize-subtitulos-responsive: 3rem;
+    --fontsize-contenido-responsive: 2.2rem;
+    --fontsize-titulos-responsive-XL: 4rem;
+    --fontsize-subtitulos-responsive-XL: 3.5rem;
+    --fontsize-contenido-responsive-XL: 2.5rem;
     --fontfamily-web: Hepta Slab;
     --HeaderFooter-Size: 7rem;
 }
@@ -393,20 +399,20 @@
 }
 .acerca-de-nombre{
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: var(--fontsize-titulos);
+    line-height:  var(--fontsize-titulos);
     margin:1rem auto;
 }
 .acerca-de-titulo{
     font-weight: 500;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: var(--fontsize-titulos);
+    line-height: var(--fontsize-titulos);
     margin: 1rem auto;
 }
 .acerca-de-info{
     font-weight: 300;
     font-size:var(--fontsize-contenido);
-    line-height: 2rem;
+    line-height:var(--fontsize-contenido);
     text-align: center;
     letter-spacing: 0.1em;
     margin: 2.5rem auto;
@@ -420,7 +426,7 @@
 .section-titles{
     font-size: var(--fontsize-titulos);
     text-align: center;
-    margin: 1rem;
+    margin: 1.5rem;
 }
 .experience-item-container{
     display: flex;
@@ -535,10 +541,12 @@ z-index: 400;
 .acerca-de-nombre{
     /* margin: 1rem auto 1rem 6.5vw; */
     margin: 0.5rem auto;
+    font-size: var(--fontsize-titulos-responsive);
 }
 .acerca-de-titulo{
     /* margin: 1rem auto 1rem 5.5vw; */
     margin: 0.5rem auto;
+    font-size: var(--fontsize-subtitulos-responsive);
 }
 .titulo-nombre-container{
     display: flex;
@@ -549,6 +557,7 @@ z-index: 400;
     align-self: center;
     /* text-align: center; */
     width: 60vw;
+    font-size: var(--fontsize-contenido-responsive);
 
 }
 .acerca-de-membrete{
@@ -561,14 +570,18 @@ z-index: 400;
     margin-right: auto;
     z-index: 700;
 }
-
+.section-titles{
+    font-size: var(--fontsize-titulos-responsive);
+    text-align: center;
+    margin: 1.8rem;
+}
 
 /* ESTILOS DE LA SECCION EXPERIENCIA  */
 .experiences-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .experience-item-front{
     /* width: 80vw; */
@@ -578,16 +591,22 @@ z-index: 400;
     /* padding: 1rem; */
 }
 .experience-place{
+    font-size: var(--fontsize-subtitulos-responsive);
     margin: 2rem;
+}
+
+.experience-date,.experience-name{
+    font-size: var(--fontsize-contenido-responsive);
+    font-weight: lighter;
 }
 
 .experience-logo-img{
     text-align: center;
     border-radius:50%;
     /* width: 40vw; */
-    max-width: 24rem;
+    max-width: 23rem;
     /* height: 40vw ; */
-    max-height: 24rem;
+    max-height: 23rem;
 }
 .experience-item-reverse{
     /* width: 80vw; */
@@ -595,27 +614,31 @@ z-index: 400;
     /* height: 80vw ; */
     max-height: 40rem;
     }
+    .experience-description{
+        font-size: var(--fontsize-contenido-responsive);
+        
+    }
 
 }
 
 
 /* ESCRITORIO WIDE */
-@media only screen   and (min-width: 996px){
+@media only screen   and (min-width: 1200px){
 
 /* ESTILOS DE ACERCA DE WIDE */
     .acerca-de-membrete{
         /* position: relative; */
         display: flex;
         flex-direction: row;
-        width: 45vw;
+        width: 50vw;
         /* justify-content: flex-start; */
         /* align-content: center; */
         /* margin-right: auto; */
         z-index: 700;
     }
     .acerca-de-nombre,.acerca-de-titulo {
-        font-size: 3rem;
-        line-height: 3.5rem;
+        font-size: var(--fontsize-titulos-responsive-XL);
+        line-height: var(--fontsize-titulos-responsive-XL);
         
     }
 
@@ -624,13 +647,13 @@ z-index: 400;
         flex-direction: column;
         justify-content: center;
         margin: auto;
-        padding: 1.5rem;
+        padding: 2rem;
     }
     .acerca-de-info{
         /* align-self: center; */
         font-weight: 500;
-        font-size: 1.9rem;
-        line-height: 2rem;
+        font-size: var(--fontsize-contenido-responsive-XL);
+        line-height: var(--fontsize-contenido-responsive-XL);
         text-align: left;
         letter-spacing: 0.1em;
         width: 50vw;
@@ -641,4 +664,47 @@ z-index: 400;
         width: 30%;
 
     }
+    .section-titles{
+        font-size: var(--fontsize-titulos-responsive-XL);
+        text-align: center;
+        margin: 2rem;
+    }
+/* ESTILOS DE LA SECCION EXPERIENCIA WIDE  */
+    .experience-item-front{
+        /* width: 80vw; */
+        max-width: 50rem;
+        /* height: 80vw ; */
+        max-height: 50rem;
+        /* padding: 1rem; */
+    }
+    .experience-place{
+        font-size: var(--fontsize-subtitulos-responsive-XL);
+        margin: 2rem;
+    }
+    
+    .experience-date,.experience-name{
+        font-size: var(--fontsize-contenido-responsive-XL);
+        font-weight: lighter;
+    }
+    
+    .experience-logo-img{
+        text-align: center;
+        border-radius:50%;
+        /* width: 40vw; */
+        max-width: 31rem;
+        /* height: 40vw ; */
+        max-height: 31rem;
+    }
+    .experience-item-reverse{
+        /* width: 80vw; */
+        max-width: 50rem;
+        /* height: 80vw ; */
+        max-height: 50rem;
+        }
+        .experience-description{
+            font-size: var(--fontsize-contenido-responsive-XL);
+            line-height: var(--fontsize-contenido-responsive-XL);
+            
+        }
+    
 }
