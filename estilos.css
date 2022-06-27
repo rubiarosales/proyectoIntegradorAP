@@ -419,6 +419,13 @@
 }
 
 /* ESTILOS DE LA SECCION DE EXPERIENCIA */
+.experience-section{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    background-color: var(--color-decoracion);
+    text-align: center;
+}
 .experiences-container{
     display: flex;
     flex-direction: column;
@@ -426,7 +433,7 @@
 .section-titles{
     font-size: var(--fontsize-titulos);
     text-align: center;
-    margin: 1.5rem;
+    padding: 1.5rem;
 }
 .experience-item-container{
     display: flex;
@@ -499,8 +506,84 @@ z-index: 400;
     }
     .experience-description{
         font-size: var(--fontsize-contenido);
-        
     }
+    /* ESTILOS DE LA SECCION EDUCACION */
+    .education-section{
+        background-color: var(--color-secundario);
+        position: relative;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+    .education-item{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: var(--color-texto-primario) solid 1px;
+    }
+
+    .education-logo{
+        width: 30vw;
+    }
+    .education-logo-img{
+        width: 60%;
+        max-width: 40rem;
+    }
+    .education-details{
+        text-align: center;
+    }
+    .education-place{
+        font-size: var(--fontsize-subtitulos);
+        margin-left: 1rem;
+        /* font-weight: lighter; */
+    }
+    .education-date,.education-name{
+        font-size: var(--fontsize-contenido);
+        font-weight: lighter;
+    }
+    /* ESTILOS DE LA SECCION HABILIDADES */
+    .skills-section{
+        background-color: var(--color-decoracion);
+        position: relative;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+    .skill-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill-item-container{
+        background-color: var(--color-primario);
+        width: 50vw;
+        height: 50vw;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-name{
+        font-size: var(--fontsize-subtitulos);
+        color: var(--color-texto-secundario);
+    }
+    .skill-level{
+        font-size: var(--fontsize-contenido);
+        color: var(--color-texto-secundario);
+        font-weight: lighter;
+    }
+    .skill-graphic{
+        position: absolute;
+        border: var(--color-secundario) solid 2rem;
+        width: 43vw;
+        height: 43vw;
+        border-radius: 50%;
+    }
+    
+
+
 /* ESCRITORIO */
 /* ESTILOS DEL BANNER */
 @media only screen   and (min-width: 769px){
@@ -573,7 +656,7 @@ z-index: 400;
 .section-titles{
     font-size: var(--fontsize-titulos-responsive);
     text-align: center;
-    margin: 1.8rem;
+    padding: 1.8rem;
 }
 
 /* ESTILOS DE LA SECCION EXPERIENCIA  */
@@ -618,7 +701,61 @@ z-index: 400;
         font-size: var(--fontsize-contenido-responsive);
         
     }
+    /* ESTILOS DE LA SECCION EDUCACION */
+    .education-item{
+        justify-content: space-around;
+        border-bottom: var(--color-texto-primario) solid 2px;
+    }
 
+    .education-logo{
+        width: 40vw;
+    }
+    .education-logo-img{
+        width: 50%;
+        max-width: 40rem;
+    }
+    .education-details{
+        text-align: start;
+    }
+    .education-place{
+        font-size: var(--fontsize-subtitulos-responsive);
+        margin-left: 2rem;
+    }
+    .education-date,.education-name{
+        font-size: var(--fontsize-contenido-responsive);
+        
+    }
+    /* ESTILOS DE LA SECCION HABILIDADES */
+    .skill-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .skill-item-container{
+        background-color: var(--color-primario);
+        width: 40rem;
+        height:40rem;
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-name{
+        font-size: var(--fontsize-subtitulos-responsive);
+    }
+    .skill-level{
+        font-size: var(--fontsize-contenido-responsive);
+    }
+    .skill-graphic{
+        position: absolute;
+        border: var(--color-secundario) solid 3rem;
+        width: 35rem;
+        height: 35rem;
+        border-radius: 50%;
+    }
 }
 
 
@@ -706,5 +843,56 @@ z-index: 400;
             line-height: var(--fontsize-contenido-responsive-XL);
             
         }
-    
+            /* ESTILOS DE LA SECCION EDUCACION WIDE*/
+    .education-item{
+        justify-content: center;
+        border-bottom: var(--color-texto-primario) solid 2px;
+    }
+
+    .education-logo{
+        width: 40vw;
+    }
+    .education-logo-img{
+        width: 50%;
+        max-width: 40rem;
+    }
+    .education-details{
+        text-align: start;
+    }
+    .education-place{
+        font-size: var(--fontsize-subtitulos-responsive-XL);
+    }
+    .education-date,.education-name{
+        font-size: var(--fontsize-contenido-responsive-XL);
+        
+    }
+        /* ESTILOS DE LA SECCION HABILIDADES */
+        .skill-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .skill-item-container{
+            background-color: var(--color-primario);
+            width: 50rem;
+            height:50rem;
+            margin: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .skill-name{
+            font-size: var(--fontsize-subtitulos-responsive-XL);
+        }
+        .skill-level{
+            font-size: var(--fontsize-contenido-responsive-XL);
+        }
+        .skill-graphic{
+            border: var(--color-secundario) solid 4rem;
+            width: 40rem;
+            height: 40rem;
+        }
 }
