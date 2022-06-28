@@ -400,19 +400,19 @@
 .acerca-de-nombre{
     font-weight: 700;
     font-size: var(--fontsize-titulos);
-    line-height:  var(--fontsize-titulos);
+    /* line-height:  var(--fontsize-titulos); */
     margin:1rem auto;
 }
 .acerca-de-titulo{
     font-weight: 500;
     font-size: var(--fontsize-titulos);
-    line-height: var(--fontsize-titulos);
+    /* line-height: var(--fontsize-titulos); */
     margin: 1rem auto;
 }
 .acerca-de-info{
     font-weight: 300;
     font-size:var(--fontsize-contenido);
-    line-height:var(--fontsize-contenido);
+    /* line-height:var(--fontsize-contenido); */
     text-align: center;
     letter-spacing: 0.1em;
     margin: 2.5rem auto;
@@ -515,11 +515,15 @@ z-index: 400;
         height: max-content;
         text-align: center;
     }
+    .education-item-container{
+        margin: 0.5rem;
+    }
     .education-item{
         display: flex;
-        justify-content: space-evenly;
+        justify-content:space-evenly;
         align-items: center;
         border-bottom: var(--color-texto-primario) solid 1px;
+        padding: 1rem;
     }
 
     .education-logo{
@@ -531,11 +535,10 @@ z-index: 400;
     }
     .education-details{
         text-align: center;
+        width: 70vw;
     }
     .education-place{
-        font-size: var(--fontsize-subtitulos);
-        margin-left: 1rem;
-        /* font-weight: lighter; */
+        font-size: var(--fontsize-contenido);
     }
     .education-date,.education-name{
         font-size: var(--fontsize-contenido);
@@ -557,8 +560,8 @@ z-index: 400;
     }
     .skill-item-container{
         background-color: var(--color-primario);
-        width: 50vw;
-        height: 50vw;
+        width: 65vw;
+        height: 65vw;
         margin: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -568,6 +571,8 @@ z-index: 400;
     .skill-name{
         font-size: var(--fontsize-subtitulos);
         color: var(--color-texto-secundario);
+        z-index: 10;
+    
     }
     .skill-level{
         font-size: var(--fontsize-contenido);
@@ -577,10 +582,54 @@ z-index: 400;
     .skill-graphic{
         position: absolute;
         border: var(--color-secundario) solid 2rem;
-        width: 43vw;
-        height: 43vw;
+        width: 50vw;
+        height: 50vw;
         border-radius: 50%;
+    
     }
+    /* ESTILOS DE LA SECCION DE PROYECTOS */
+.proyect-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proyect-item-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 65vw;
+    height: 80vw;
+    border: var(--color-primario) solid 1px;
+    border-radius: 0px 0px 20% 20%;
+}
+.proyect-item-container a{
+    font-size: var(--fontsize-contenido);
+    color: var(--color-texto-primario);
+    font-weight: lighter;
+}
+
+.proyect-name{
+    font-size: var(--fontsize-subtitulos);
+    color: var(--color-texto-primario);
+}
+
+.proyect-date{
+    font-size: var(--fontsize-contenido);
+    color: var(--color-texto-primario);
+    font-weight: lighter;
+}
+
+.proyect-img{
+    align-self: center;
+    width: 80%;
+    height: 60%;
+    background-color: var(--color-secundario);
+    object-fit: cover;
+}
     
 
 
@@ -708,21 +757,27 @@ z-index: 400;
     }
 
     .education-logo{
-        width: 40vw;
+        width: 35vw;
     }
     .education-logo-img{
-        width: 50%;
-        max-width: 40rem;
+        width: 30%;
+        max-width: 30rem;
     }
     .education-details{
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
         text-align: start;
     }
     .education-place{
-        font-size: var(--fontsize-subtitulos-responsive);
-        margin-left: 2rem;
+        font-size: var(--fontsize-contenido-responsive);
+        margin: 0.5rem;
     }
     .education-date,.education-name{
         font-size: var(--fontsize-contenido-responsive);
+        margin: 1rem;
         
     }
     /* ESTILOS DE LA SECCION HABILIDADES */
@@ -756,6 +811,42 @@ z-index: 400;
         height: 35rem;
         border-radius: 50%;
     }
+        /* ESTILOS DE LA SECCION DE PROYECTOS */
+.proyect-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.proyect-item-container{
+    margin: 1rem;
+    min-width: 32.5rem;
+    min-height: 40rem;
+    max-width: 45rem;
+    max-height: 55rem;
+    border: var(--color-primario) solid 2px;
+    border-radius: 0px 0px 20% 20%;
+}
+.proyect-item-container a{
+    font-size: var(--fontsize-contenido-responsive);
+}
+
+.proyect-name{
+    font-size: var(--fontsize-subtitulos-responsive);
+}
+
+.proyect-date{
+    font-size: var(--fontsize-contenido-responsive);
+}
+
+/* .proyect-img{
+    align-self: center;
+    width: 80%;
+    height: 60%;
+    background-color: var(--color-secundario);
+    object-fit: cover;
+} */
 }
 
 
@@ -775,7 +866,7 @@ z-index: 400;
     }
     .acerca-de-nombre,.acerca-de-titulo {
         font-size: var(--fontsize-titulos-responsive-XL);
-        line-height: var(--fontsize-titulos-responsive-XL);
+        /* line-height: var(--fontsize-titulos-responsive-XL); */
         
     }
 
@@ -790,7 +881,7 @@ z-index: 400;
         /* align-self: center; */
         font-weight: 500;
         font-size: var(--fontsize-contenido-responsive-XL);
-        line-height: var(--fontsize-contenido-responsive-XL);
+        /* line-height: var(--fontsize-contenido-responsive-XL); */
         text-align: left;
         letter-spacing: 0.1em;
         width: 50vw;
@@ -840,7 +931,7 @@ z-index: 400;
         }
         .experience-description{
             font-size: var(--fontsize-contenido-responsive-XL);
-            line-height: var(--fontsize-contenido-responsive-XL);
+            /* line-height: var(--fontsize-contenido-responsive-XL); */
             
         }
             /* ESTILOS DE LA SECCION EDUCACION WIDE*/
@@ -895,4 +986,31 @@ z-index: 400;
             width: 40rem;
             height: 40rem;
         }
+                /* ESTILOS DE LA SECCION DE PROYECTOS WIDE */
+.proyect-container{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.proyect-item-container{
+       border: var(--color-primario) solid 3px;
+}
+.proyect-item-container a{
+    font-size: var(--fontsize-contenido-responsive-XL);
+}
+
+.proyect-name{
+    font-size: var(--fontsize-subtitulos-responsive-XL);
+}
+
+.proyect-date{
+    font-size: var(--fontsize-contenido-responsive-XL);
+}
+
+/* .proyect-img{
+    align-self: center;
+    width: 80%;
+    height: 60%;
+    background-color: var(--color-secundario);
+    object-fit: cover;
+} */
 }
