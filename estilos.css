@@ -103,6 +103,30 @@
     background: none;
     cursor: pointer;
 }
+
+    /* ESTILOS DEL FOOTER */
+.footer-section{
+    background-color: var(--color-primario);
+    width: 100%;
+    height:var(--HeaderFooter-Size);
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    z-index: 1000;
+}
+footer .logo-section{
+    width:20%;
+}
+
+footer .social-section{
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ESTILOS DEL HEADER RESPONSIVE */
 @media only screen   and (max-width: 769px){
     :root{
@@ -216,6 +240,29 @@
         0%{width:40%;}
         100%{width:0;}
     } */
+        /* ESTILOS DEL FOOTER */
+.footer-section{
+
+    width: 100%;
+    height:var(--HeaderFooter-Size);
+   }
+   footer .logo-section{
+    width:45%;
+}
+
+footer .logo-curso{
+    display: block;
+    width: 42%;
+    height:75%;
+    max-height: 3.5rem;;
+}
+footer .logo-curso-responsive{
+    display: none;
+    /* width: 80%;
+    height: 90%;
+    max-width: 5rem;
+    max-height: 5rem; */
+}
 }
 @media only screen and (max-width: 400px){
     :root{
@@ -317,6 +364,18 @@
     @keyframes abriendo-menu {
         0%{width:0;}
         100%{width: 70%;}
+    }
+    /* ESTILOS DEL FOOTER */
+    footer .logo-curso{
+        display: none;
+        width: 60%;
+        height: 70%;
+    }
+    footer .logo-curso-responsive{
+        display: block;
+    }
+    footer .nombre_curso{
+        display: block;
     }
 }
 /* (MOBILE FIRST) */
@@ -876,6 +935,7 @@ z-index: 400;
         justify-content: center;
         margin: auto;
         padding: 2rem;
+        width: fit-content;
     }
     .acerca-de-info{
         /* align-self: center; */
