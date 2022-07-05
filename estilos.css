@@ -103,6 +103,15 @@
     background: none;
     cursor: pointer;
 }
+.logout-logo{
+    display: none;
+}
+/* .social-bar .boton-edicion{
+    left: 0;
+}
+.social-bar .boton-edicion img{
+    background-color: var(--color-decoracion);
+} */
 
     /* ESTILOS DEL FOOTER */
 .footer-section{
@@ -689,6 +698,30 @@ z-index: 400;
     background-color: var(--color-secundario);
     object-fit: cover;
 }
+
+.proyect-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.boton-edicion{
+    display: none;
+    position: absolute;
+    z-index: 950;
+    right:0;
+    border: none;
+    background-color: #00000000 ;
+    pointer-events: all;
+}
+
+.boton-edicion img{
+    width: 4rem;
+}
+
+.banner-container .boton-edicion{
+    bottom: 0;
+    }
+
     
 
 
@@ -906,6 +939,9 @@ z-index: 400;
     background-color: var(--color-secundario);
     object-fit: cover;
 } */
+.boton-edicion img{
+    width: 5.5rem;
+}
 }
 
 
@@ -1065,12 +1101,18 @@ z-index: 400;
 .proyect-date{
     font-size: var(--fontsize-contenido-responsive-XL);
 }
-
-/* .proyect-img{
+/* 
+.proyect-img{
     align-self: center;
-    width: 80%;
+    width: 100%;
     height: 60%;
     background-color: var(--color-secundario);
+    
+}
+.proyect-img img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 } */
+
 }
