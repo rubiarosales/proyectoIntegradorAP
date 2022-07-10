@@ -103,9 +103,39 @@
     background: none;
     cursor: pointer;
 }
+.login-logo{
+    cursor: pointer;
+}
 .logout-logo{
     display: none;
+    cursor: pointer;
 }
+.data{
+    position: absolute;
+    display: none;
+    right: 0;
+    /* display: flex; */
+    flex-direction: column;
+    width: 20rem;
+    padding: 0.5rem;
+    /* height: 30rem; */
+    color: var(--color-texto-secundario);
+    font-size: 1.2rem;
+    background-color: var(--color-primario);
+}
+.data a {
+    color: var(--color-texto-secundario);
+    margin: 00.2rem;
+}
+.data input {
+    margin: 00.2rem;
+}
+.data-btn{
+    width: 50%;
+    margin: 0.8rem  auto;
+    
+}
+
 /* .social-bar .boton-edicion{
     left: 0;
 }
