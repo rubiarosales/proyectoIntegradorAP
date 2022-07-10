@@ -5,6 +5,11 @@ const redesSociales = document.querySelector(".social-bar");
 
 function abrir() {
     redesSociales.classList.toggle("menu-abierto");
+    inicioDeSesion.style.display="none";
+    recuperarContraseña.style.display="none";
+    registrarse.style.display="none";
+    entrarBtn.style.display="flex";
+    salirBtn.style.display="none";
     // redesSociales.classList.remove("menu-cerrado");
 }
 function cerrar() {
