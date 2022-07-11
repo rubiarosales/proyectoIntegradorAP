@@ -40,32 +40,26 @@
     z-index: 1000;
 }
 .logo-section{
-    /* position: absolute; */
     width: 30%;
     height:var(--HeaderFooter-Size);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* left: 1.5rem; */
 }
 .logo-curso-responsive{
     display: none;
 }
 .logo-curso{
-    /* position: absolute; */
     width: 80%;
     height: 60%;
     max-width: 13rem;
     max-height: var(--HeaderFooter-Size);
 }
 .nombre_curso{
-    /* position: absolute; */
     font-size: 1.5rem;
     display: block;
     padding: 0;
     color:var(--color-texto-secundario);
-    /* top: 5.5rem;
-    left: 1.5rem; */
     letter-spacing: 0.5rem
 }
 .social-section{
@@ -113,22 +107,28 @@
 .data{
     position: absolute;
     display: none;
+    justify-content: center;
+    align-items:center;
     right: 0;
-    /* display: flex; */
     flex-direction: column;
-    width: 20rem;
-    padding: 0.5rem;
-    /* height: 30rem; */
+    width: 25rem;
+    padding: 1rem;
+    height: max-content;
     color: var(--color-texto-secundario);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     background-color: var(--color-primario);
+}
+.data label {
+    align-self: flex-start;
+    margin-left: 1.5rem;
 }
 .data a {
     color: var(--color-texto-secundario);
-    margin: 00.2rem;
+    margin: 0.2rem;
 }
 .data input {
-    margin: 00.2rem;
+    margin: 0.3rem;
+    width: 80%;
 }
 .data-btn{
     width: 50%;
@@ -136,12 +136,6 @@
     
 }
 
-/* .social-bar .boton-edicion{
-    left: 0;
-}
-.social-bar .boton-edicion img{
-    background-color: var(--color-decoracion);
-} */
 
     /* ESTILOS DEL FOOTER */
 .footer-section{
@@ -174,7 +168,6 @@ footer .social-section{
     .header-section{
         height: var(--HeaderFooter-Size); 
         padding: 0 0.3rem 0 0.3rem;
-        /* z-index: 200; */
     }
     .logo-section{
         width: 40%;
@@ -223,7 +216,6 @@ footer .social-section{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        /* margin: 0.3rem; */
     }
     .cerrarMenu-responsive{
         display: flex;
@@ -237,11 +229,6 @@ footer .social-section{
         animation-duration: 0.8s;
         animation-name: abriendo-menu;
     }
-    /* .menu-cerrado{
-        
-        animation-duration: 0.8s;
-        animation-name: cerrando-menu;
-    } */
     .nombre-redes{
         display: flex;
         color: var(--color-texto-secundario);
@@ -252,7 +239,6 @@ footer .social-section{
     .social-section img {
         height: 3.5rem;
         width: 3.5rem;
-        /* margin: 0 0 0.2rem  0; */
         padding: 0;
     }
     .login-bar img{
@@ -275,10 +261,7 @@ footer .social-section{
         0%{width:0;}
         100%{width:40%;}
     }
-/*  @keyframes cerrando-menu {
-        0%{width:40%;}
-        100%{width:0;}
-    } */
+
         /* ESTILOS DEL FOOTER */
 .footer-section{
 
@@ -297,10 +280,6 @@ footer .logo-curso{
 }
 footer .logo-curso-responsive{
     display: none;
-    /* width: 80%;
-    height: 90%;
-    max-width: 5rem;
-    max-height: 5rem; */
 }
 }
 @media only screen and (max-width: 400px){
@@ -312,23 +291,16 @@ footer .logo-curso-responsive{
         padding: 0 0.2rem 0 0.2rem;
     }
     .logo-section{
-        /* width: 40%; */
         height: var(--HeaderFooter-Size); 
-        /* flex-direction: row; */
-        /* justify-content:flex-start; */
         align-items: center;
     }
     .logo-curso-responsive{
-        /* display: flex;
-        width: 80%; */
         height: 100%;
         max-width: 4.5rem;
         max-height: var(--HeaderFooter-Size); 
         margin: 0;
     }
-/*.logo-curso{
-        display: none;
-    } */
+
     .nombre_curso{
         display: none;
     }
@@ -341,38 +313,17 @@ footer .logo-curso-responsive{
         align-items:center;
     }
     .social-bar {
-        /* margin: 0;
-        position: absolute; */
         width: 70%;
         max-width: 15rem;
-        /* top: 0;
-        right: 0rem;
-        display: none;
-        flex-direction: column;
-        background-color: var(--color-primario); */
     }
     .social-bar a{
         height: var(--HeaderFooter-Size); 
-        /* text-decoration: none;
-        display: flex;*/
         align-items: center;
-        /* justify-content: flex-start; */
-        /* margin: 0.3rem; */
     }
     .cerrarMenu-responsive{
-        /* display: flex;
-        padding: 0; */
         height: var(--HeaderFooter-Size); 
     }
-    /* .social-bar :first-child{
-        align-self: flex-end;
-    } */
-    /* .menu-abierto{
-        display: flex;
-    } */
     .nombre-redes{
-        /* display: flex;
-        color: var(--color-texto-secundario); */
         font-size: 1.2rem;
         letter-spacing: 0.2rem;
         margin-left: 1.5rem;  
@@ -380,21 +331,11 @@ footer .logo-curso-responsive{
     .social-section img {
         height: 3rem;
         width: 3rem;
-        /* margin: 0 0.4rem 0 0; */
-        /* padding: 0; */
     }
     .login-bar img{
         margin: 0 0.2rem 0 0;
-        /* height: 3.5rem;
-        width: 3.5rem;  */
     }
-    /* .abrirMenu-responsive{
-        display: flex;
-    } */
-    /* .abrirMenu-responsive img{
-        height: 3rem;
-        width: 3rem
-    } */
+
     .cerrarMenu-responsive img{
         margin:1rem 1rem 1rem 0;
         height: 2rem;
@@ -426,8 +367,6 @@ footer .logo-curso-responsive{
     width: 100%;
     height: 35vh;
     max-height: 600px;
-    /* top: var(--HeaderFooter-Size); */
-    /* z-index: 100; */
 }
 .banner-img{
     width: 100%;
@@ -437,23 +376,6 @@ footer .logo-curso-responsive{
     object-position: 80% 80%;
     z-index: 500;
 }
-/* .prev-btn{
-    position: absolute;
-    z-index: 100;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    left: 95%;
-    top: 40%;
-}
-
-.prev-btn img{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-} */
 
 /* ESTILOS DE LA FOTO DE PERFIL  */
 
@@ -468,7 +390,6 @@ footer .logo-curso-responsive{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    /* top: -7rem; */
     z-index: 600;
 }
 .foto-container img{
@@ -488,8 +409,6 @@ footer .logo-curso-responsive{
     background-color: var(--color-secundario);
     text-align: center;
     padding: 1.5rem;
-    /* top: calc(35vh + var(--HeaderFooter-Size)); */
-    /* overflow: hidden; */
 }
 .acerca-de-membrete{
     position: relative;
@@ -498,19 +417,16 @@ footer .logo-curso-responsive{
 .acerca-de-nombre{
     font-weight: 700;
     font-size: var(--fontsize-titulos);
-    /* line-height:  var(--fontsize-titulos); */
     margin:1rem auto;
 }
 .acerca-de-titulo{
     font-weight: 500;
     font-size: var(--fontsize-titulos);
-    /* line-height: var(--fontsize-titulos); */
     margin: 1rem auto;
 }
 .acerca-de-info{
     font-weight: 300;
     font-size:var(--fontsize-contenido);
-    /* line-height:var(--fontsize-contenido); */
     text-align: center;
     letter-spacing: 0.1em;
     margin: 2.5rem auto;
@@ -571,7 +487,6 @@ z-index: 400;
 .experience-place{
     font-size: var(--fontsize-subtitulos);
     margin: 1rem;
-    /* font-weight: lighter; */
 }
 .experience-date,.experience-name{
     font-size: var(--fontsize-contenido);
@@ -598,7 +513,6 @@ z-index: 400;
     max-width: 38rem;
     height: 80vw ;
     max-height: 38rem;
-    /* margin: auto; */
     padding: 1rem;
     background-color: var(--color-secundario);
     }
@@ -759,28 +673,19 @@ z-index: 400;
 /* ESTILOS DEL BANNER */
 @media only screen   and (min-width: 769px){
     .banner-container{
-        /* background-color: var(--color-secundario);
-        position: relative;
-        width: 100%; */
         height: 45vh;
-        /* top: var(--HeaderFooter-Size); */
     }
     .banner-img{
-        /* height: 100%; */
-        /* width: 100%;
-        position: absolute;*/
         object-position: 80% 75%;
         object-fit: cover; 
     }
 
 /* ESTILOS DE LA FOTO DE PERFIL */
 .foto-container{
-    /* margin-left: 3vw; */
     min-width: 250px;
     max-width: 250px;
     min-height: 250px;
     max-height: 250px;
-    /* top: -15vh; */
 }
 
 .acerca-de-section{
@@ -788,17 +693,13 @@ z-index: 400;
     justify-content: space-between;
     height: min-content;
     padding: 1.5rem;
-    /* top: calc(50vh + var(--HeaderFooter-Size)); */
-    /* overflow: hidden; */
     text-align:start;
 }
 .acerca-de-nombre{
-    /* margin: 1rem auto 1rem 6.5vw; */
     margin: 0.5rem auto;
     font-size: var(--fontsize-titulos-responsive);
 }
 .acerca-de-titulo{
-    /* margin: 1rem auto 1rem 5.5vw; */
     margin: 0.5rem auto;
     font-size: var(--fontsize-subtitulos-responsive);
 }
@@ -809,7 +710,6 @@ z-index: 400;
 }
 .acerca-de-info{
     align-self: center;
-    /* text-align: center; */
     width: 60vw;
     font-size: var(--fontsize-contenido-responsive);
 
@@ -838,11 +738,8 @@ z-index: 400;
     justify-content: space-evenly;
 }
 .experience-item-front{
-    /* width: 80vw; */
     max-width: 40rem;
-    /* height: 80vw ; */
     max-height: 40rem;
-    /* padding: 1rem; */
 }
 .experience-place{
     font-size: var(--fontsize-subtitulos-responsive);
@@ -857,15 +754,11 @@ z-index: 400;
 .experience-logo-img{
     text-align: center;
     border-radius:50%;
-    /* width: 40vw; */
     max-width: 23rem;
-    /* height: 40vw ; */
     max-height: 23rem;
 }
 .experience-item-reverse{
-    /* width: 80vw; */
     max-width: 40rem;
-    /* height: 80vw ; */
     max-height: 40rem;
     }
     .experience-description{
@@ -962,13 +855,6 @@ z-index: 400;
     font-size: var(--fontsize-contenido-responsive);
 }
 
-/* .proyect-img{
-    align-self: center;
-    width: 80%;
-    height: 60%;
-    background-color: var(--color-secundario);
-    object-fit: cover;
-} */
 .boton-edicion img{
     width: 5.5rem;
 }
@@ -980,19 +866,13 @@ z-index: 400;
 
 /* ESTILOS DE ACERCA DE WIDE */
     .acerca-de-membrete{
-        /* position: relative; */
         display: flex;
         flex-direction: row;
         width: 50vw;
-        /* justify-content: flex-start; */
-        /* align-content: center; */
-        /* margin-right: auto; */
         z-index: 700;
     }
     .acerca-de-nombre,.acerca-de-titulo {
         font-size: var(--fontsize-titulos-responsive-XL);
-        /* line-height: var(--fontsize-titulos-responsive-XL); */
-        
     }
 
     .titulo-nombre-container{
@@ -1004,10 +884,8 @@ z-index: 400;
         width: fit-content;
     }
     .acerca-de-info{
-        /* align-self: center; */
         font-weight: 500;
         font-size: var(--fontsize-contenido-responsive-XL);
-        /* line-height: var(--fontsize-contenido-responsive-XL); */
         text-align: left;
         letter-spacing: 0.1em;
         width: 50vw;
@@ -1025,11 +903,8 @@ z-index: 400;
     }
 /* ESTILOS DE LA SECCION EXPERIENCIA WIDE  */
     .experience-item-front{
-        /* width: 80vw; */
         max-width: 50rem;
-        /* height: 80vw ; */
         max-height: 50rem;
-        /* padding: 1rem; */
     }
     .experience-place{
         font-size: var(--fontsize-subtitulos-responsive-XL);
@@ -1044,21 +919,15 @@ z-index: 400;
     .experience-logo-img{
         text-align: center;
         border-radius:50%;
-        /* width: 40vw; */
         max-width: 31rem;
-        /* height: 40vw ; */
         max-height: 31rem;
     }
     .experience-item-reverse{
-        /* width: 80vw; */
         max-width: 50rem;
-        /* height: 80vw ; */
         max-height: 50rem;
         }
         .experience-description{
             font-size: var(--fontsize-contenido-responsive-XL);
-            /* line-height: var(--fontsize-contenido-responsive-XL); */
-            
         }
             /* ESTILOS DE LA SECCION EDUCACION WIDE*/
     .education-item{
@@ -1131,18 +1000,4 @@ z-index: 400;
 .proyect-date{
     font-size: var(--fontsize-contenido-responsive-XL);
 }
-/* 
-.proyect-img{
-    align-self: center;
-    width: 100%;
-    height: 60%;
-    background-color: var(--color-secundario);
-    
-}
-.proyect-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 }

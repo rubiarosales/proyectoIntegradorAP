@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    --color-primario: #260B78;
+    --color-secundario:#A0BCC7;
+    --color-texto-primario:#000000;
+    --color-texto-secundario:#ffffff;
+    --color-decoracion:#ffffff;
+    --fontsize-titulos: 3rem;
+    --fontsize-subtitulos: 2.5rem;
+    --fontsize-contenido: 1.8rem;
+    --fontsize-titulos-responsive: 3.5rem;
+    --fontsize-subtitulos-responsive: 3rem;
+    --fontsize-contenido-responsive: 2.2rem;
+    --fontsize-titulos-responsive-XL: 4rem;
+    --fontsize-subtitulos-responsive-XL: 3.5rem;
+    --fontsize-contenido-responsive-XL: 2.5rem;
+    --fontfamily-web: Hepta Slab;
+    --HeaderFooter-Size: 7rem;
+}
+
+.boton-edicion{
+    display: none;
+    position: absolute;
+    z-index: 950;
+    right:0;
+    border: none;
+    background-color: #00000000 ;
+    pointer-events: all;
+}
+
+.boton-edicion img{
+    width: 4rem;
+}
+
+.banner-container .boton-edicion{
+    bottom: 0;
+    }
+
+    @media only screen and (max-width: 400px){
+        :root{
+            --HeaderFooter-Size: 4rem;
+        }
+    }
+
+@media only screen   and (max-width: 769px){
+    :root{
+        --HeaderFooter-Size: 5rem;
+    }
+    .boton-edicion img{
+        width: 5.5rem;
+    }
+}
