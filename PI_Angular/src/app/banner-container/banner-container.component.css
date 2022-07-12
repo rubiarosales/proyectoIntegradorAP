@@ -7,8 +7,6 @@
     width: 100%;
     height: 35vh;
     max-height: 600px;
-    /* top: var(--HeaderFooter-Size); */
-    /* z-index: 100; */
 }
 .banner-img{
     width: 100%;
@@ -18,20 +16,14 @@
     object-position: 80% 80%;
     z-index: 500;
 }
-/* .prev-btn{
-    position: absolute;
-    z-index: 100;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    left: 95%;
-    top: 40%;
-}
 
-.prev-btn img{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-} */
+/* ESCRITORIO */
+/* ESTILOS DEL BANNER */
+@media only screen   and (min-width: 769px){
+    .banner-container{
+        height: 45vh;
+    }
+    .banner-img{
+        object-position: 80% 75%;
+    }
+}

@@ -1,0 +1,132 @@
+    /* ESTILOS DEL FOOTER */
+    .footer-section{
+        background-color: var(--color-primario);
+        width: 100%;
+        height:var(--HeaderFooter-Size);
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+        z-index: 1000;
+    }
+    footer .logo-section{
+        width:20%;
+    }
+    
+    footer .social-section{
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+    }
+    
+.logo-section{
+    width: 30%;
+    height:var(--HeaderFooter-Size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-curso-responsive{
+    display: none;
+}
+.logo-curso{
+    width: 80%;
+    height: 60%;
+    max-width: 13rem;
+    max-height: var(--HeaderFooter-Size);
+}
+.nombre_curso{
+    font-size: 1.5rem;
+    display: block;
+    padding: 0;
+    color:var(--color-texto-secundario);
+    letter-spacing: 0.5rem
+}
+.social-section{
+    width: 50%;
+    height:var(--HeaderFooter-Size);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.social-bar {
+    margin: 0 2rem 0 0;
+}
+.social-section img {
+    height: 4rem;
+    width: 4rem;
+    margin: 0.5rem;
+    padding: 0;
+}
+.nombre-redes{
+    display: none;
+}
+
+/* ESTILOS DEL HEADER RESPONSIVE */
+@media only screen   and (max-width: 769px){
+
+    .nombre_curso{
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem
+    }
+
+    .social-bar {
+        margin: 0;
+        position: absolute;
+        width: 40%;
+        max-width: 18rem;
+        top: 0;
+        right: 0rem;
+        display:none;
+        flex-direction: column;
+        background-color: var(--color-primario);
+        z-index: 1000;
+    }
+
+
+    /* ESTILOS DEL FOOTER */
+.footer-section{
+
+    width: 100%;
+    height:var(--HeaderFooter-Size);
+   }
+   footer .logo-section{
+    width:45%;
+}
+
+footer .logo-curso{
+    display: block;
+    width: 42%;
+    height:75%;
+    max-height: 3.5rem;;
+}
+footer .logo-curso-responsive{
+    display: none;
+}
+    }
+
+    @media only screen and (max-width: 400px){
+
+
+        .logo-curso-responsive{
+            height: 100%;
+            max-width: 4.5rem;
+            max-height: var(--HeaderFooter-Size); 
+            margin: 0;
+        }
+
+        /* ESTILOS DEL FOOTER */
+        footer .logo-curso{
+            display: none;
+            width: 60%;
+            height: 70%;
+        }
+        footer .logo-curso-responsive{
+            display: block;
+        }
+        footer .nombre_curso{
+            display: block;
+        }
+    }

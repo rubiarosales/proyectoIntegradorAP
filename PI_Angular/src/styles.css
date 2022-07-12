@@ -44,13 +44,19 @@
 .banner-container .boton-edicion{
     bottom: 0;
     }
+    
+.section-titles{
+    font-size: var(--fontsize-titulos);
+    text-align: center;
+    padding: 1.5rem;
+    }
 
     @media only screen and (max-width: 400px){
         :root{
             --HeaderFooter-Size: 4rem;
         }
     }
-
+/* ESCRITORIO */
 @media only screen   and (max-width: 769px){
     :root{
         --HeaderFooter-Size: 5rem;
@@ -58,4 +64,17 @@
     .boton-edicion img{
         width: 5.5rem;
     }
+    .section-titles{
+        font-size: var(--fontsize-titulos-responsive);
+        text-align: center;
+        padding: 1.8rem;
+    }
 }
+/* ESCRITORIO WIDE */
+@media only screen   and (min-width: 1200px){
+        .section-titles{
+            font-size: var(--fontsize-titulos-responsive-XL);
+            text-align: center;
+            margin: 2rem;
+        }
+    }

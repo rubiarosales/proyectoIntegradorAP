@@ -1,0 +1,154 @@
+
+/* ESTILOS DE LA SECCION DE EXPERIENCIA */
+.experience-section{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    background-color: var(--color-decoracion);
+    text-align: center;
+}
+.experiences-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item-container{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+    position: relative;
+}
+.experience-item-front{
+display: flex;
+position: relative;
+background-color: var(--color-decoracion);
+transition: opacity 1.5s;
+flex-direction: column;
+justify-content:space-evenly;
+align-items: center;
+border: 1px solid var(--color-primario) ;
+border-radius: 10%;
+width: 80vw;
+max-width: 38rem;
+height: 80vw ;
+max-height: 38rem;
+margin: auto;
+padding: 1rem;
+z-index: 400;
+}
+.experience-item-front:hover{
+   opacity: 0;
+   transition: opacity 1.5s;
+}
+
+.experience-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+}
+.experience-place{
+    font-size: var(--fontsize-subtitulos);
+    margin: 1rem;
+}
+.experience-date,.experience-name{
+    font-size: var(--fontsize-contenido);
+    font-weight: lighter;
+}
+.experience-logo-img{
+    text-align: center;
+    border-radius:50%;
+    width: 40vw;
+    max-width: 22rem;
+    height: 40vw ;
+    max-height: 22rem;
+}
+.experience-item-reverse{
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: 300;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-primario) ;
+    border-radius: 10%;
+    width: 80vw;
+    max-width: 38rem;
+    height: 80vw ;
+    max-height: 38rem;
+    padding: 1rem;
+    background-color: var(--color-secundario);
+    }
+    .experience-description{
+        font-size: var(--fontsize-contenido);
+    }
+
+/* ESCRITORIO */
+@media only screen   and (min-width: 769px){
+
+/* ESTILOS DE LA SECCION EXPERIENCIA  */
+.experiences-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.experience-item-front{
+    max-width: 40rem;
+    max-height: 40rem;
+}
+.experience-place{
+    font-size: var(--fontsize-subtitulos-responsive);
+    margin: 2rem;
+}
+
+.experience-date,.experience-name{
+    font-size: var(--fontsize-contenido-responsive);
+    font-weight: lighter;
+}
+
+.experience-logo-img{
+    text-align: center;
+    border-radius:50%;
+    max-width: 23rem;
+    max-height: 23rem;
+}
+.experience-item-reverse{
+    max-width: 40rem;
+    max-height: 40rem;
+    }
+    .experience-description{
+        font-size: var(--fontsize-contenido-responsive);
+    }
+    }
+
+    
+
+/* ESCRITORIO WIDE */
+@media only screen   and (min-width: 1200px){
+.experience-item-front{
+    max-width: 50rem;
+    max-height: 50rem;
+}
+.experience-place{
+    font-size: var(--fontsize-subtitulos-responsive-XL);
+    margin: 2rem;
+}
+.experience-date,.experience-name{
+    font-size: var(--fontsize-contenido-responsive-XL);
+    font-weight: lighter;
+}
+.experience-logo-img{
+    text-align: center;
+    border-radius:50%;
+    max-width: 31rem;
+    max-height: 31rem;
+}
+.experience-item-reverse{
+    max-width: 50rem;
+    max-height: 50rem;
+    }
+.experience-description{
+    font-size: var(--fontsize-contenido-responsive-XL);
+}
+        }

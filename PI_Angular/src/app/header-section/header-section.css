@@ -1,118 +1,122 @@
-.header-section{
-        background-color: var(--color-primario);
-        position: fixed;
-        width: 100%;
-        height:var(--HeaderFooter-Size);
-        left: 0;
-        top: 0;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1rem 0 1rem;
-        z-index: 1000;
-    }
-    .logo-section{
-        /* position: absolute; */
-        width: 30%;
-        height:var(--HeaderFooter-Size);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* left: 1.5rem; */
-    }
-    .logo-curso-responsive{
-        display: none;
-    }
-    .logo-curso{
-        /* position: absolute; */
-        width: 80%;
-        height: 60%;
-        max-width: 13rem;
-        max-height: var(--HeaderFooter-Size);
-    }
-    .nombre_curso{
-        /* position: absolute; */
-        font-size: 1.5rem;
-        display: block;
-        padding: 0;
-        color:var(--color-texto-secundario);
-        /* top: 5.5rem;
-        left: 1.5rem; */
-        letter-spacing: 0.5rem
-    }
-    .social-section{
-        width: 50%;
-        height:var(--HeaderFooter-Size);
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .social-bar {
-        margin: 0 2rem 0 0;
-    }
-    .social-section img {
-        height: 4rem;
-        width: 4rem;
-        margin: 0.5rem;
-        padding: 0;
-    }
-    .login-bar img{
-        height: 5.5rem;
-        width: 5.5rem;
-    }
-    .abrirMenu-responsive{
-        display: none;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-    .nombre-redes{
-        display: none;
-    }
-    .cerrarMenu-responsive{
-        display: none;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-    .login-logo{
-        cursor: pointer;
-    }
-    .logout-logo{
-        display: none;
-        cursor: pointer;
-    }
-    .data{
-        position: absolute;
-        display: none;
-        right: 0;
-        /* display: flex; */
-        flex-direction: column;
-        width: 20rem;
-        padding: 0.5rem;
-        /* height: 30rem; */
-        color: var(--color-texto-secundario);
-        font-size: 1.2rem;
-        background-color: var(--color-primario);
-    }
-    .data a {
-        color: var(--color-texto-secundario);
-        margin: 00.2rem;
-    }
-    .data input {
-        margin: 00.2rem;
-    }
-    .data-btn{
-        width: 50%;
-        margin: 0.8rem  auto;
-        
-    }
 
-    /* ESTILOS DEL HEADER RESPONSIVE */
+/* ESTILOS DEL HEADER */
+.header-section{
+    background-color: var(--color-primario);
+    position: fixed;
+    width: 100%;
+    height:var(--HeaderFooter-Size);
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+    z-index: 1000;
+}
+.logo-section{
+    width: 30%;
+    height:var(--HeaderFooter-Size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-curso-responsive{
+    display: none;
+}
+.logo-curso{
+    width: 80%;
+    height: 60%;
+    max-width: 13rem;
+    max-height: var(--HeaderFooter-Size);
+}
+.nombre_curso{
+    font-size: 1.5rem;
+    display: block;
+    padding: 0;
+    color:var(--color-texto-secundario);
+    letter-spacing: 0.5rem
+}
+.social-section{
+    width: 50%;
+    height:var(--HeaderFooter-Size);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.social-bar {
+    margin: 0 2rem 0 0;
+}
+.social-section img {
+    height: 4rem;
+    width: 4rem;
+    margin: 0.5rem;
+    padding: 0;
+}
+.login-bar img{
+    height: 5.5rem;
+    width: 5.5rem;
+}
+.abrirMenu-responsive{
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.nombre-redes{
+    display: none;
+}
+.cerrarMenu-responsive{
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.login-logo{
+    cursor: pointer;
+}
+.logout-logo{
+    display: none;
+    cursor: pointer;
+}
+.data{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items:center;
+    right: 0;
+    flex-direction: column;
+    width: 25rem;
+    padding: 1rem;
+    height: max-content;
+    color: var(--color-texto-secundario);
+    font-size: 1.4rem;
+    background-color: var(--color-primario);
+}
+.data label {
+    align-self: flex-start;
+    margin-left: 1.5rem;
+}
+.data a {
+    color: var(--color-texto-secundario);
+    margin: 0.2rem;
+}
+.data input {
+    margin: 0.3rem;
+    width: 80%;
+}
+.data-btn{
+    width: 50%;
+    margin: 0.8rem  auto;
+    
+}
+
+/* ESTILOS DEL HEADER RESPONSIVE */
 @media only screen   and (max-width: 769px){
+    :root{
+        --HeaderFooter-Size: 5rem;
+    }
     .header-section{
         height: var(--HeaderFooter-Size); 
         padding: 0 0.3rem 0 0.3rem;
-        /* z-index: 200; */
     }
     .logo-section{
         width: 40%;
@@ -161,7 +165,6 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        /* margin: 0.3rem; */
     }
     .cerrarMenu-responsive{
         display: flex;
@@ -175,11 +178,6 @@
         animation-duration: 0.8s;
         animation-name: abriendo-menu;
     }
-    /* .menu-cerrado{
-        
-        animation-duration: 0.8s;
-        animation-name: cerrando-menu;
-    } */
     .nombre-redes{
         display: flex;
         color: var(--color-texto-secundario);
@@ -190,7 +188,6 @@
     .social-section img {
         height: 3.5rem;
         width: 3.5rem;
-        /* margin: 0 0 0.2rem  0; */
         padding: 0;
     }
     .login-bar img{
@@ -212,4 +209,69 @@
     @keyframes abriendo-menu {
         0%{width:0;}
         100%{width:40%;}
-    }}
+    }
+}
+@media only screen and (max-width: 400px){
+    :root{
+        --HeaderFooter-Size: 4rem;
+    }
+    .header-section{
+        height: var(--HeaderFooter-Size); 
+        padding: 0 0.2rem 0 0.2rem;
+    }
+    .logo-section{
+        height: var(--HeaderFooter-Size); 
+        align-items: center;
+    }
+    .logo-curso-responsive{
+        height: 100%;
+        max-width: 4.5rem;
+        max-height: var(--HeaderFooter-Size); 
+        margin: 0;
+    }
+
+    .nombre_curso{
+        display: none;
+    }
+    .social-section{
+        width: 40%;
+        max-width: 15rem;
+        height: var(--HeaderFooter-Size); 
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    .social-bar {
+        width: 70%;
+        max-width: 15rem;
+    }
+    .social-bar a{
+        height: var(--HeaderFooter-Size); 
+        align-items: center;
+    }
+    .cerrarMenu-responsive{
+        height: var(--HeaderFooter-Size); 
+    }
+    .nombre-redes{
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        margin-left: 1.5rem;  
+    }
+    .social-section img {
+        height: 3rem;
+        width: 3rem;
+    }
+    .login-bar img{
+        margin: 0 0.2rem 0 0;
+    }
+
+    .cerrarMenu-responsive img{
+        margin:1rem 1rem 1rem 0;
+        height: 2rem;
+        width: 2rem
+    }
+    @keyframes abriendo-menu {
+        0%{width:0;}
+        100%{width: 70%;}
+    }
+}

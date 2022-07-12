@@ -1,0 +1,116 @@
+    /* ESTILOS DE LA SECCION EDUCACION */
+    .education-section {
+        background-color: var(--color-secundario);
+        position: relative;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+
+    .education-item-container {
+        margin: 0.5rem;
+    }
+
+    .education-item {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: var(--color-texto-primario) solid 1px;
+        padding: 1rem;
+    }
+
+    .education-logo {
+        width: 30vw;
+    }
+
+    .education-logo-img {
+        width: 60%;
+        max-width: 40rem;
+    }
+
+    .education-details {
+        text-align: center;
+        width: 70vw;
+    }
+
+    .education-place {
+        font-size: var(--fontsize-contenido);
+    }
+
+    .education-date,
+    .education-name {
+        font-size: var(--fontsize-contenido);
+        font-weight: lighter;
+    }
+
+    /* ESCRITORIO */
+    @media only screen and (min-width: 769px) {
+
+        /* ESTILOS DE LA SECCION EDUCACION */
+        .education-item {
+            justify-content: space-around;
+            border-bottom: var(--color-texto-primario) solid 2px;
+        }
+
+        .education-logo {
+            width: 35vw;
+        }
+
+        .education-logo-img {
+            width: 30%;
+            max-width: 30rem;
+        }
+
+        .education-details {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: start;
+        }
+
+        .education-place {
+            font-size: var(--fontsize-contenido-responsive);
+            margin: 0.5rem;
+        }
+
+        .education-date,
+        .education-name {
+            font-size: var(--fontsize-contenido-responsive);
+            margin: 1rem;
+
+        }
+    }
+
+    /* ESCRITORIO WIDE */
+    @media only screen and (min-width: 1200px) {
+
+        /* ESTILOS DE LA SECCION EDUCACION WIDE*/
+        .education-item {
+            justify-content: center;
+            border-bottom: var(--color-texto-primario) solid 2px;
+        }
+
+        .education-logo {
+            width: 40vw;
+        }
+
+        .education-logo-img {
+            width: 50%;
+            max-width: 40rem;
+        }
+
+        .education-details {
+            text-align: start;
+        }
+
+        .education-place {
+            font-size: var(--fontsize-subtitulos-responsive-XL);
+        }
+
+        .education-date,
+        .education-name {
+            font-size: var(--fontsize-contenido-responsive-XL);
+        }
+    }
