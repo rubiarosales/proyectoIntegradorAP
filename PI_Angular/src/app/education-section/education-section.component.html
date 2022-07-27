@@ -4,7 +4,19 @@
     </button>
     <h2 class="education-title section-titles">EDUCACIÓN</h2>
     <div class="education-container">
-        <div class="education-item-container">
+        <div *ngFor="let education of educationList" class="education-item-container">
+            <div class="education-item">
+                <div class="education-logo">
+                    <img [src]="education.logoEstudio" [alt]="education.altLogo" class="education-logo-img">
+                </div>
+                <div class="education-details">
+                    <h3 class="education-place"> {{education.lugarEstudio}}</h3>
+                    <h4 class="education-name">{{education.nombreEstudio}}</h4>
+                    <h4 class="education-date">{{education.fechaEstudio}}</h4>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="education-item-container">
             <div class="education-item">
                 <div class="education-logo">
                     <img src="assets/img/APLogo2.png" alt="Logo Argentina Programa" class="education-logo-img">
@@ -39,6 +51,6 @@
                     <h4 class="education-date">2008-2013</h4>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

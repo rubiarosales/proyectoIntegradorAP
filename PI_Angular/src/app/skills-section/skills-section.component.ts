@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+
 
 @Component({
   selector: 'skills-section',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills-section.component.css']
 })
 export class SkillsSectionComponent implements OnInit {
+  skillList:any;
 
-  constructor() { }
+  constructor(private datosPortfolio:PortfolioServiceService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    this.skillList=data.skills;
+    });
   }
-
 }

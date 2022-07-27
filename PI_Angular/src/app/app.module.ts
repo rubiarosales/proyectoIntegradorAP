@@ -10,6 +10,9 @@ import { EducationSectionComponent } from './education-section/education-section
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { ProyectSectionComponent } from './proyect-section/proyect-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component'
+import { PortfolioServiceService } from './servicios/portfolio-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CargarScriptService } from './servicios/cargar-script.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
     FooterSectionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PortfolioServiceService, CargarScriptService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

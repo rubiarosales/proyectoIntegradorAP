@@ -4,7 +4,15 @@
     </button>
     <h2 class="proyect-title section-titles">PROYECTOS</h2>
     <div class="proyect-container">
-        <div class="proyect-item-container">
+        <div *ngFor="let proyect of proyectList" class="proyect-item-container">
+            <h3 class="proyect-name">{{proyect.proyecto}}</h3>
+            <h4 class="proyect-date">{{proyect.fechaProyecto}}</h4>
+            <div class="proyect-img">
+                <img [src]="proyect.imgProyecto" [alt]="proyect.altProyecto">
+            </div>
+            <a [href]="proyect.urlProyecto" target="_blank">Ver Proyecto</a>
+        </div>
+        <!-- <div class="proyect-item-container">
             <h3 class="proyect-name">Curriculum Vitae</h3>
             <h4 class="proyect-date">Diciembre 2021</h4>
             <div class="proyect-img">
@@ -27,6 +35,6 @@
                 <img src="assets/img/calculadora.jpg" alt="imagen de una calculadora">
             </div>
             <a href="https://rubiarosales.github.io/Javascript/Promedios/" target="_blank">Ver Proyecto</a>
-        </div>
+        </div> -->
     </div>
 </div>

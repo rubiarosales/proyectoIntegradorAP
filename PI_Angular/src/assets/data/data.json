@@ -1,0 +1,98 @@
+{
+    "email": "@hotmail.com",
+    "contraseña": "123",
+    "twitter":"https://twitter.com/rubia_jru",
+    "linkedin":"https://www.linkedin.com/in/rubia-rosales-182220228/",
+    "instagram":"https://www.instagram.com/rubia_jru/",
+    "imgBanner": "#",
+    "name": "RUBIA ROSALES",
+    "position": "Fullstack Developer Jr.",
+    "acercaDe": "Soy ingeniera de Petróleo, actualmente me desempeño como administrativa en una cadena de bicicleterías; paralelamente me dedico al diseño y desarrollo de sitios y páginas web. Me preparo constantemente para obtener mejores resultados en mis proyectos",
+    "imgPerfil": "assets/img/perfil-img.jpg",
+    "experience":[
+        {
+            "empresa": "Bike Networks SRL",
+            "fecha": "2017 - Actualidad",
+            "cargo": "Administrativa",
+            "logoEmpresa": "assets/img/Canaglia_marca_color.png",
+            "altLogo": "Logo Canaglia",
+            "descripcionCargo": "Empleada administrativa, realizo tareas de conciliacion bancaria, emision de ordenes de pago, facturacion y seguimiento de cuentas corrientes, entre otras tareas administrativas"
+        },
+        {
+            "empresa": "Winkl SA",
+            "fecha": "2015 - 2016",
+            "cargo": "Vendedora/Cajera",
+            "logoEmpresa": "assets/img/kvn -logo.png",
+            "altLogo": "Logo Kevingston",
+            "descripcionCargo": "Vendedora en local de indumentaria masculina con suplencias eventuales en caja. Control de stock, venta y asesoria"
+        },
+        {
+            "empresa": "Aires Hot",
+            "fecha": "2014 - 2015",
+            "cargo": "Encargada",
+            "logoEmpresa": "assets/img/aires-hot-logo.jpg",
+            "altLogo": "Logo Aires Hot",
+            "descripcionCargo": "Encargada de local de indumentaria femenina y accesorios, diseño de vidriera, control de stock, inventario mensual, elaboracion de ordenes de pedido e ingreso de mercaderìa. Con personal a cargo."
+        }
+    ],
+    "education":[
+        {
+            "lugarEstudio":" Argentina Programa",
+            "fechaEstudio":"10/2021 - 08/2022",
+            "nombreEstudio":"SeProgramar/YoProgramo",
+            "logoEstudio":"assets/img/APLogo2.png",
+            "altLogo": "Logo Argentina Programa"
+        },
+        {
+            "lugarEstudio": " Codo a Codo",
+            "fechaEstudio": "03/2018 - 12/2018",
+            "nombreEstudio": "Fundamentos de Programación",
+            "logoEstudio": "assets/img/codoacodo-logo.png",
+            "altLogo": "Logo Codo a Codo"
+        },
+        {
+            "lugarEstudio": " La Universidad del Zulia (LUZ)",
+            "fechaEstudio": "03/2008 - 07/2013",
+            "nombreEstudio": "Ingeniería de Petróleo",
+            "logoEstudio": "assets/img/LogoLUZ.png",
+            "altLogo": "Logo LUZ"
+        }
+    ],
+    "skills":[
+        {
+            "skill": " HTML",
+            "nivelSkill": "90"
+        },
+        {
+            "skill": " CSS",
+            "nivelSkill": "80"
+        },
+        {
+            "skill": " JAVASCRIPT",
+            "nivelSkill": "65"
+        }
+    ],
+    "proyects":[
+        {
+            "proyecto":"Curriculum Vitae",
+            "fechaProyecto":"12/2021",
+            "imgProyecto":"assets/img/resumen.jpg",
+            "altProyecto":"Imagen de currículo",
+            "urlProyecto":"https://rubiarosales.github.io/resumen/"
+        },
+        {
+            "proyecto":"Practicas de JavaScript",
+            "fechaProyecto":"02/2022",
+            "imgProyecto":"assets/img/javascript.jpg",
+            "altProyecto":"Logo de javascript",
+            "urlProyecto":"https://github.com/rubiarosales/Javascript"
+        },
+        {
+            "proyecto":"Calculadora de promedios",
+            "fechaProyecto":"05/2022",
+            "imgProyecto":"assets/img/calculadora.jpg",
+            "altProyecto":"Imagen de una calculadora",
+            "urlProyecto": "https://rubiarosales.github.io/Javascript/Promedios/"
+        }
+    ]
+}

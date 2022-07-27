@@ -4,7 +4,13 @@
     </button>
     <h2 class="skill-title section-titles">HABILIDADES</h2>
     <div class="skill-container">
-        <div class="skill-item-container">
+        <div *ngFor="let skill of skillList" class="skill-item-container">
+            <h3 class="skill-name">{{skill.skill}}</h3>
+            <h4 class="skill-level">{{skill.nivelSkill}}%</h4>
+            <div class="skill-graphic"></div>
+        </div>
+
+        <!-- <div class="skill-item-container">
             <h3 class="skill-name">HTML</h3>
             <h4 class="skill-level">90%</h4>
             <div class="skill-graphic"></div>
@@ -18,6 +24,6 @@
             <h3 class="skill-name">JAVASCRIPT</h3>
             <h4 class="skill-level">65%</h4>
             <div class="skill-graphic"></div>
-        </div>
+        </div> -->
     </div>
 </div>
