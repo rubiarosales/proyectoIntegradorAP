@@ -5,7 +5,8 @@
     <button class="boton-edicion" aria-label="editar">
         <img src="assets/img/edit_icon.svg" alt="Icono de edición">
     </button>
-    <img src="assets/img/banner_img3.jpg" alt="Imagen banner 3" class="banner-img" id="banner-img-3">
+    <img *ngFor="let banner of bannerList; let i=index" [src]="banner.bannerUrl" [alt]="banner.altBanner" class="banner-img" id=`banner-img-{{i+1}}`>
+    <!-- <img src="assets/img/banner_img3.jpg" alt="Imagen banner 3" class="banner-img" id="banner-img-3">
     <img src="assets/img/banner_img2.jpg" alt="Imagen banner 2" class="banner-img" id="banner-img-2">
-    <img src="assets/img/banner_img1.jpg" alt="Imagen banner 1" class="banner-img" id="banner-img-1">
+    <img src="assets/img/banner_img1.jpg" alt="Imagen banner 1" class="banner-img" id="banner-img-1"> -->
 </div>

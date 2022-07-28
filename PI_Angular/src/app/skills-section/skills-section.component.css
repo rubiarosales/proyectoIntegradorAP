@@ -19,8 +19,8 @@
         margin: 0.5rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
     .skill-name{
         font-size: var(--fontsize-subtitulos);
@@ -29,37 +29,46 @@
     
     }
     .skill-level{
+        position: relative;
         font-size: var(--fontsize-contenido);
         color: var(--color-texto-secundario);
         font-weight: lighter;
+        z-index: 10;
+        margin: 1.5rem;
     }
     .skill-graphic{
         position: absolute;
-        border: var(--color-secundario) solid 2rem;
+        transform: rotate(90deg);
+        /* background-color: var(--color-secundario); */
         width: 50vw;
         height: 50vw;
         border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+    .skill-graphic:before{
+        content: "";
+        position: absolute;
+        background-color:var(--color-primario);
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
     
     }
+
     /* ESCRITORIO */
 @media only screen   and (min-width: 769px){
     /* ESTILOS DE LA SECCION HABILIDADES */
+    
     .skill-container{
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: center;
     }
     .skill-item-container{
-        background-color: var(--color-primario);
         width: 40rem;
         height:40rem;
         margin: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
     .skill-name{
         font-size: var(--fontsize-subtitulos-responsive);
@@ -68,34 +77,18 @@
         font-size: var(--fontsize-contenido-responsive);
     }
     .skill-graphic{
-        position: absolute;
-        border: var(--color-secundario) solid 3rem;
         width: 35rem;
         height: 35rem;
-        border-radius: 50%;
-    }
-    }
+    }}
     
 /* ESCRITORIO WIDE */
 @media only screen   and (min-width: 1200px){
 
             /* ESTILOS DE LA SECCION HABILIDADES */
-            .skill-container{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                align-items: center;
-            }
             .skill-item-container{
-                background-color: var(--color-primario);
                 width: 50rem;
                 height:50rem;
                 margin: 2.5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
             }
             .skill-name{
                 font-size: var(--fontsize-subtitulos-responsive-XL);
@@ -104,7 +97,6 @@
                 font-size: var(--fontsize-contenido-responsive-XL);
             }
             .skill-graphic{
-                border: var(--color-secundario) solid 4rem;
                 width: 40rem;
                 height: 40rem;
             }

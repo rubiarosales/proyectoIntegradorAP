@@ -64,3 +64,27 @@ function recuperar() {
 }
 
 recupero.addEventListener("click",recuperar);
+
+// SCRIPT DE SKILLS
+let container= document.querySelector(".skill-container").children;
+
+for (let elemento of container) {
+    let progressBar=elemento.querySelector(".skill-graphic");
+    let valueContainer=elemento.querySelector(".skill-level");
+    let value=elemento.querySelector(".skill-level").innerHTML;
+    let progressValue=0;
+    let speed= 70;
+    
+    let progress = setInterval( ()=>{
+        progressValue++;
+        progressBar.style.background=`conic-gradient(
+            var(--color-secundario) ${progressValue * 3.6}deg,
+            #ffffff00 ${progressValue * 3.6}deg
+            )`;
+        if(progressValue==value){
+            clearInterval(progress);
+        }
+        valueContainer.textContent=`${progressValue}%`;
+    },speed);
+
+}

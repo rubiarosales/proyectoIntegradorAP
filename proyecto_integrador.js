@@ -66,32 +66,25 @@ function recuperar() {
 recupero.addEventListener("click",recuperar);
 
 // SCRIPT DE SKILLS
-let progressBar=document.querySelector(".skill-graphic");
-let valueContainer=document.querySelector(".skill-level");
-let value=document.querySelector(".skill-level").innerHTML;
 let container= document.querySelector(".skill-container").children;
-console.log(container)
-
-let progressValue=0;
-let speed= 80;
 
 for (let elemento of container) {
-console.log(elemento);
+    let progressBar=elemento.querySelector(".skill-graphic");
+    let valueContainer=elemento.querySelector(".skill-level");
+    let value=elemento.querySelector(".skill-level").innerHTML;
+    let progressValue=0;
+    let speed= 80;
+    
+    let progress = setInterval( ()=>{
+        progressValue++;
+        progressBar.style.background=`conic-gradient(
+            var(--color-secundario) ${progressValue * 3.6}deg,
+            #ffffff00 ${progressValue * 3.6}deg
+            )`;
+        if(progressValue==value){
+            clearInterval(progress);
+        }
+        valueContainer.textContent=`${progressValue}%`;
+    },speed);
+
 }
-
-let progress = setInterval( ()=>{
-    progressValue++;
-    // progressBar.style.backgroundColor=`green`;
-    console.log(progressBar);
-    progressBar.style.background=`conic-gradient(
-        blue ${progressValue * 3.6}deg,
-        green ${progressValue * 3.6}deg
-    )`;
-    // console.log(progressValue);
-    if(progressValue==value){
-        clearInterval(progress);
-    }
-    valueContainer.textContent=`${progressValue}%`;
-},speed);
-
-

@@ -4,11 +4,24 @@
     "twitter":"https://twitter.com/rubia_jru",
     "linkedin":"https://www.linkedin.com/in/rubia-rosales-182220228/",
     "instagram":"https://www.instagram.com/rubia_jru/",
-    "imgBanner": "#",
     "name": "RUBIA ROSALES",
     "position": "Fullstack Developer Jr.",
     "acercaDe": "Soy ingeniera de Petróleo, actualmente me desempeño como administrativa en una cadena de bicicleterías; paralelamente me dedico al diseño y desarrollo de sitios y páginas web. Me preparo constantemente para obtener mejores resultados en mis proyectos",
     "imgPerfil": "assets/img/perfil-img.jpg",
+    "imgBanner":[
+        {
+            "bannerUrl":"assets/img/banner_img3.jpg",
+            "altBanner": "Imagen Banner"
+        },
+        {
+            "bannerUrl":"assets/img/banner_img2.jpg",
+            "altBanner": "Imagen Banner"
+        },
+        {
+            "bannerUrl":"assets/img/banner_img1.jpg",
+            "altBanner": "Imagen Banner"
+        }
+    ],
     "experience":[
         {
             "empresa": "Bike Networks SRL",

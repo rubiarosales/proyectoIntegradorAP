@@ -582,20 +582,21 @@ z-index: 400;
     }
     .skill-name{
         font-size: var(--fontsize-subtitulos);
-        color: var(--color-texto-primario);
+        color: var(--color-texto-secundario);
         z-index: 10;
     
     }
     .skill-level{
         position: relative;
         font-size: var(--fontsize-contenido);
-        color: var(--color-texto-primario);
+        color: var(--color-texto-secundario);
         font-weight: lighter;
         z-index: 10;
         margin: 1.5rem;
     }
     .skill-graphic{
         position: absolute;
+        transform: rotate(90deg);
         /* background-color: var(--color-secundario); */
         width: 50vw;
         height: 50vw;
@@ -606,7 +607,7 @@ z-index: 400;
     .skill-graphic:before{
         content: "";
         position: absolute;
-        background-color: rgb(255, 255, 255);
+        background-color:var(--color-primario);
         width: 85%;
         height: 85%;
         border-radius: 50%;
