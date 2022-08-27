@@ -1,0 +1,32 @@
+public class Vectores4 {
+
+public static void main(String[] args) {
+int temp[]= new int[23];
+int maximo=0;
+int imax=0;
+int tmax[]=new int [5];
+System.out.println("Ingrese las temperaturas máximas");
+Scanner teclado= new Scanner (System.in);
+    for (int i=0; i<23;i++){
+        temp[i]=teclado.nextInt();
+    }
+for(int t=0;t<5;t++){
+    for (int i=0; i<23;i++){
+        if(temp[i]>maximo){
+            maximo=temp[i];
+            imax=i;
+        }  
+    }
+     temp[imax]=0;
+     tmax[t]=maximo;
+     maximo=0;
+}
+
+System.out.println("Temperatura 1º "+tmax[0]);
+System.out.println("Temperatura 2º "+tmax[1]);
+System.out.println("Temperatura 3º "+tmax[2]);
+System.out.println("Temperatura 4º "+tmax[3]);
+System.out.println("Temperatura 5º "+tmax[4]);
+
+}
+}
