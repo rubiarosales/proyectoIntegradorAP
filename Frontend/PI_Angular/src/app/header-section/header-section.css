@@ -44,10 +44,15 @@
 }
 .social-bar {
     margin: 0 2rem 0 0;
+
+}
+.social-bar img{
+    align-items: baseline;
+
 }
 .social-section img {
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     margin: 0.5rem;
     padding: 0;
 }
