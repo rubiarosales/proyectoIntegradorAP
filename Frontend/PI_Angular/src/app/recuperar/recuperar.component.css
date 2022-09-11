@@ -1,0 +1,42 @@
+
+/* ESTILOS DEL HEADER */
+section{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 25rem;
+    padding: 1rem;
+    height: max-content;
+    color: var(--color-texto-secundario);
+    font-size: 1.4rem;
+    background-color: var(--color-primario);
+    margin: auto;
+}
+
+label {
+    align-self: flex-start;
+    margin-left: 1.5rem;
+}
+
+a {
+    color: var(--color-texto-secundario);
+    margin: 0.2rem;
+}
+
+input {
+    margin: 0.3rem;
+    width: 80%;
+}
+button{
+    width: 50%;
+    margin: 0.8rem  auto;
+}
+
+/* ESTILOS DEL HEADER RESPONSIVE */
+@media only screen   and (max-width: 769px){
+    :root{
+        --HeaderFooter-Size: 5rem;
+    }
+  
+}

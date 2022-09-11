@@ -26,29 +26,8 @@
             </button> -->
         </div>
         <div class="login-bar">
-            <img src="assets/img/login_icon.svg" alt="logo de inicio de sesion" class="login-logo">
+            <img src="assets/img/login_icon.svg" alt="logo de inicio de sesion" class="login-logo" (click)="login()">
             <img src="assets/img/logout_icon.svg" alt="logo de cierre de sesion" class="logout-logo">
-            <div class="login-section data">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="log-email" placeholder="ejemplo@email.com">
-                <label for="password">Contraseña</label>
-                <input id="password" type="password" name="log-pass">
-                <button type="submit" class="send-btn data-btn">Entrar</button>
-                <a href="#" class="registro">Si no estás registrado haz click acá</a>
-                <a href="#" class="recupero">Olvidé mi contraseña</a>
-            </div>
-            <div class="register-section data">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="log-email" placeholder="ejemplo@email.com">
-                <label for="password">Contraseña</label>
-                <input id="password" type="password" name="log-pass">
-                <button type="submit" class="data-btn">Registrarme</button>
-            </div>
-            <div class="forgot-section data">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="log-email" placeholder="ejemplo@email.com">
-                <button type="submit" class="data-btn">Recuperar</button>
-            </div>
         </div>
         <button class="abrirMenu-responsive" aria-label="abrir menu">
             <img src="assets/img/bars-solid.svg" alt="Menu responive">

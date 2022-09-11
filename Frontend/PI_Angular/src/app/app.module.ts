@@ -13,6 +13,12 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
 import { PortfolioServiceService } from './servicios/portfolio-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CargarScriptService } from './servicios/cargar-script.service';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { RegistrarComponent } from './registrar/registrar.component';
+import { RecuperarComponent } from './recuperar/recuperar.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +30,17 @@ import { CargarScriptService } from './servicios/cargar-script.service';
     EducationSectionComponent,
     SkillsSectionComponent,
     ProyectSectionComponent,
-    FooterSectionComponent
+    FooterSectionComponent,
+    HomeComponent,
+    LoginComponent,
+    RegistrarComponent,
+    RecuperarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [PortfolioServiceService, CargarScriptService],
   bootstrap: [AppComponent]
