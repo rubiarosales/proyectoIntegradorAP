@@ -14,8 +14,6 @@ function abrir() {
 }
 function cerrar() {
     redesSociales.classList.remove("menu-abierto");
-    // redesSociales.classList.add("menu-cerrado");
-    // redesSociales.style.transition="width 0.5s";
 }
 abrirMenuBtn.addEventListener("click",abrir);
 cerrarMenuBtn.addEventListener("click",cerrar);

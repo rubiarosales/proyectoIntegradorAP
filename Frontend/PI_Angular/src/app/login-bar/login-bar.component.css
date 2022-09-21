@@ -1,0 +1,36 @@
+
+.login-bar img{
+    height: 5.5rem;
+    width: 5.5rem;
+}
+.logout-logo{
+    /* display: none; */
+    cursor: pointer;
+}
+
+
+/* ESTILOS DEL HEADER RESPONSIVE */
+@media only screen   and (max-width: 769px){
+    :root{
+        --HeaderFooter-Size: 5rem;
+    }
+
+
+    .login-bar img{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    :root{
+        --HeaderFooter-Size: 4rem;
+    }
+
+
+
+    .login-bar img{
+        margin: 0 0.2rem 0 0;
+    }
+
+
+}

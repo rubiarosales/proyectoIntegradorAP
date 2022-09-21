@@ -1,0 +1,4 @@
+<div class="login-bar">
+    <img src="assets/img/login_icon.svg" alt="logo de inicio de sesion" class="login-logo" (click)="login()" *ngIf="!isLogged">
+    <img src="assets/img/logout_icon.svg" alt="logo de cierre de sesion" class="logout-logo" (click)="onLogOut()" *ngIf="isLogged">
+</div>

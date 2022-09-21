@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 public class Usuario {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @NotNull
     private String nombre;
     @NotNull
@@ -45,11 +45,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

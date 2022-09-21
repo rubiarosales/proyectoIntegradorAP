@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class Rol {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @NotNull
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
@@ -29,11 +29,11 @@ public class Rol {
     }
 
     //Getters y Setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

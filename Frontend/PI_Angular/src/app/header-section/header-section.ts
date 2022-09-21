@@ -25,8 +25,6 @@ export class headerSection implements OnInit {
     });
 
   }
-  login(){
-    this.router.navigate(['/login']);
-  }
+
 
 }

@@ -14,11 +14,13 @@ import { PortfolioServiceService } from './servicios/portfolio-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CargarScriptService } from './servicios/cargar-script.service';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { RegistrarComponent } from './registrar/registrar.component';
+import { RegistrarComponent } from './auth/registrar/registrar.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
+import { LoginBarComponent } from './login-bar/login-bar.component';
+import { interceptorProvider } from './interceptors/persona-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { RecuperarComponent } from './recuperar/recuperar.component';
     HomeComponent,
     LoginComponent,
     RegistrarComponent,
-    RecuperarComponent
+    RecuperarComponent,
+    LoginBarComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { RecuperarComponent } from './recuperar/recuperar.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PortfolioServiceService, CargarScriptService],
+  providers: [PortfolioServiceService,CargarScriptService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
