@@ -52,7 +52,7 @@ public class EducacionController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<?> uptade(@PathVariable("id") long id, @RequestBody dtoEducacion dtoEdu) {
+    public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody dtoEducacion dtoEdu) {
         if (!iEducacionService.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.BAD_REQUEST);
         }

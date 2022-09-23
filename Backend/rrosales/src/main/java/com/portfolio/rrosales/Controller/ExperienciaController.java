@@ -51,7 +51,7 @@ public class ExperienciaController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<?> uptade(@PathVariable("id") long id, @RequestBody dtoExperiencia dtoExp) {
+    public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody dtoExperiencia dtoExp) {
         if (!iExperienciaService.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.BAD_REQUEST);
         }
