@@ -1,4 +1,4 @@
-<div class="proyect-section">
+<!-- <div class="proyect-section">
     <button class="boton-edicion" aria-label="editar">
         <img src="assets/img/edit_icon.svg" alt="Icono de edición">
     </button>
@@ -12,29 +12,22 @@
             </div>
             <a [href]="proyect.urlProyecto" target="_blank">Ver Proyecto</a>
         </div>
-        <!-- <div class="proyect-item-container">
-            <h3 class="proyect-name">Curriculum Vitae</h3>
-            <h4 class="proyect-date">Diciembre 2021</h4>
+    </div>
+</div> -->
+
+<div class="proyect-section">
+    <button class="boton-edicion" aria-label="editar">
+        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+    </button>
+    <h2 class="proyect-title section-titles">PROYECTOS</h2>
+    <div class="proyect-container">
+        <div *ngFor="let proyecto of proy" class="proyect-item-container">
+            <h3 class="proyect-name">{{proyecto.titulo}}</h3>
+            <h4 class="proyect-date">{{proyecto.fecha}}</h4>
             <div class="proyect-img">
-                <img src="assets/img/resumen.jpg" alt="imagen de curriculo">
+                <img [src]="proyecto.url_img" [alt]="proyecto.titulo">
             </div>
-            <a href="https://rubiarosales.github.io/resumen/" target="_blank">Ver Proyecto</a>
+            <a [href]="proyecto.url_proyecto" target="_blank">Ver Proyecto</a>
         </div>
-        <div class="proyect-item-container">
-            <h3 class="proyect-name">Practicas de JavaScript</h3>
-            <h4 class="proyect-date">2022</h4>
-            <div class="proyect-img">
-                <img src="assets/img/javascript.jpg" alt="imagen de logo de javascript">
-            </div>
-            <a href="https://github.com/rubiarosales/Javascript" target="_blank">Ver Proyecto</a>
-        </div>
-        <div class="proyect-item-container">
-            <h3 class="proyect-name">Calculadora de promedios</h3>
-            <h4 class="proyect-date">Mayo 2022</h4>
-            <div class="proyect-img">
-                <img src="assets/img/calculadora.jpg" alt="imagen de una calculadora">
-            </div>
-            <a href="https://rubiarosales.github.io/Javascript/Promedios/" target="_blank">Ver Proyecto</a>
-        </div> -->
     </div>
 </div>

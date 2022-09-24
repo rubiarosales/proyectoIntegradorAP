@@ -1,4 +1,4 @@
-<div class="skills-section">
+<!-- <div class="skills-section">
     <button class="boton-edicion" aria-label="editar">
         <img src="assets/img/edit_icon.svg" alt="Icono de edición">
     </button>
@@ -10,20 +10,19 @@
             <div class="skill-graphic"></div>
         </div>
 
-        <!-- <div class="skill-item-container">
-            <h3 class="skill-name">HTML</h3>
-            <h4 class="skill-level">90%</h4>
+    </div>
+</div> -->
+<div class="skills-section">
+    <button class="boton-edicion" aria-label="editar">
+        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+    </button>
+    <h2 class="skill-title section-titles">HABILIDADES</h2>
+    <div class="skill-container">
+        <div *ngFor="let habilidad of hab" class="skill-item-container">
+            <h3 class="skill-name">{{habilidad.habilidad}}</h3>
+            <h4 class="skill-level">{{habilidad.nivel}}</h4>
             <div class="skill-graphic"></div>
         </div>
-        <div class="skill-item-container">
-            <h3 class="skill-name">CSS</h3>
-            <h4 class="skill-level">80%</h4>
-            <div class="skill-graphic"></div>
-        </div>
-        <div class="skill-item-container">
-            <h3 class="skill-name">JAVASCRIPT</h3>
-            <h4 class="skill-level">65%</h4>
-            <div class="skill-graphic"></div>
-        </div> -->
+
     </div>
 </div>

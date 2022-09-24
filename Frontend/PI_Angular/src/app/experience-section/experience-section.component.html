@@ -1,4 +1,4 @@
-<div class="experience-section">
+<!-- <div class="experience-section">
     <button class="boton-edicion" aria-label="editar">
         <img src="assets/img/edit_icon.svg" alt="Icono de edición">
     </button>
@@ -17,6 +17,30 @@
             </div>
             <div class="experience-item-reverse">
                 <p class="experience-description">{{experiencia.descripcionCargo}}</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="experience-section">
+    <button class="boton-edicion" aria-label="editar">
+        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+    </button>
+    <h2 class="experience-title section-titles">EXPERIENCIA</h2>
+    <div class="experiences-container">
+        <div *ngFor="let experiencia of exp" class="experience-item-container">
+            <div class="experience-item-front">
+                <div class="experience-details">
+                    <h3 class="experience-place"> {{experiencia.empresa}}</h3>
+                    <h4 class="experience-date">{{experiencia.fecha}}</h4>
+                    <h4 class="experience-name">{{experiencia.cargo}}</h4>
+                </div>
+                <div class="experience-logo">
+                    <img [src]="experiencia.url_logo" [alt]="experiencia.empresa" class="experience-logo-img">
+                </div>
+            </div>
+            <div class="experience-item-reverse">
+                <p class="experience-description">{{experiencia.descripcion_cargo}}</p>
             </div>
         </div>
     </div>
