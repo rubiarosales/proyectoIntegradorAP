@@ -1,1 +1,9 @@
-<p>editar-edu works!</p>
+<div *ngIf="editEdu">
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onEdit()" novalidate>
+        <input type="text" name="institucion" placeholder="Institucion" [(ngModel)]="editEdu.institucion" required>
+        <input type="text" name="titulo" placeholder="Titulo obtenido" [(ngModel)]="editEdu.titulo" required>
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="editEdu.fecha" required>
+        <input type="text" name="url_logo" placeholder="URL del logo de la institucion" [(ngModel)]="editEdu.url_logo" required>
+        <button type="submit" class="btn-add">Guardar</button>
+    </form>
+    </div>

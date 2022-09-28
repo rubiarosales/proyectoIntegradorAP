@@ -9,6 +9,7 @@
 
     .education-item-container {
         margin: 0.5rem;
+        position: relative;
     }
 
     .education-item {

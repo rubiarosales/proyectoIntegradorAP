@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Educacion } from '../model/educacion';
 import { EducacionService } from '../servicios/educacion.service';
 import { PortfolioServiceService } from '../servicios/portfolio-service.service';
@@ -15,7 +16,8 @@ export class EducationSectionComponent implements OnInit {
 
   educationList:any;
 
-  constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private educacionService:EducacionService) { }
+  constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private educacionService:EducacionService,
+    private router:Router) { }
   isLogged=false;
 
   ngOnInit(): void {
@@ -36,4 +38,19 @@ cargarEducacion():void{
   this.educacionService.listaEducacion().subscribe(
     data =>{this.edu = data})
 }
+deleteEdu(id?:number){
+  if(id!=undefined){
+    this.educacionService.delete(id).subscribe(
+      { next: data =>{
+         this.cargarEducacion();
+       },
+       error: err =>{
+         alert("No se pudo eliminar la eduacion");
+         this.router.navigate(['']);
+       }
+     }
+     )
+   }
+  }
+
 }

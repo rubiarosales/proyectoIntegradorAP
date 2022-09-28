@@ -1,33 +1,19 @@
-<!-- <div class="education-section">
-    <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
-    </button>
-    <h2 class="education-title section-titles">EDUCACIÓN</h2>
-    <div class="education-container">
-        <div *ngFor="let education of educationList" class="education-item-container">
-            <div class="education-item">
-                <div class="education-logo">
-                    <img [src]="education.logoEstudio" [alt]="education.altLogo" class="education-logo-img">
-                </div>
-                <div class="education-details">
-                    <h3 class="education-place"> {{education.lugarEstudio}}</h3>
-                    <h4 class="education-name">{{education.nombreEstudio}}</h4>
-                    <h4 class="education-date">{{education.fechaEstudio}}</h4>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> -->
-
 <div class="education-section">
-    <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
-    </button>
     <h2 class="education-title section-titles">EDUCACIÓN</h2>
+    <button class="btn-add" type="button" routerLink="/agregarEdu" *ngIf="isLogged">Agregar (+)</button>
+    
+
     <div class="education-container">
+        
         <div *ngFor="let educacion of edu" class="education-item-container">
+            <button class="boton-edicion" routerLink="/editarEdu/{{educacion.id}}" aria-label="editar" *ngIf="isLogged" >
+                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+            </button>
+            <button class="boton-eliminar" (click)="deleteEdu(educacion.id)" aria-label="eliminar" *ngIf="isLogged" >
+                <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
+            </button>
             <div class="education-item">
+
                 <div class="education-logo">
                     <img [src]="educacion.url_logo" [alt]="educacion.institucion" class="education-logo-img">
                 </div>

@@ -1,1 +1,10 @@
-<p>nueva-edu works!</p>
+<div >
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onAdd()" novalidate>
+        <input type="text" name="institucion" placeholder="Institucion" [(ngModel)]="institucion" required>
+        <input type="text" name="titulo" placeholder="Titulo obtenido" [(ngModel)]="titulo" required>
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="fecha" required>
+        <input type="text" name="url_logo" placeholder="URL del logo de la institucion" [(ngModel)]="url_logo" required>
+        <button type="submit" class="btn-add">Agregar</button>
+    </form>
+    </div>
+    

@@ -6,6 +6,8 @@ import { RecuperarComponent } from "./recuperar/recuperar.component";
 import { RegistrarComponent } from "./auth/registrar/registrar.component";
 import { NuevaExpComponent } from "./nueva-exp/nueva-exp.component";
 import { EditarExpComponent } from "./editar-exp/editar-experiencia.component";
+import { NuevaEduComponent } from "./nueva-edu/nueva-edu.component";
+import { EditarEduComponent } from "./editar-edu/editar-edu.component";
 
 
 const routes: Routes=[
@@ -14,7 +16,10 @@ const routes: Routes=[
     {path:'registrar', component:RegistrarComponent},
     {path:'recuperar', component:RecuperarComponent},
     {path:'agregarExp', component:NuevaExpComponent},
-    {path:'editarExp/:id', component:EditarExpComponent}
+    {path:'editarExp/:id', component:EditarExpComponent},
+    {path:'agregarEdu', component:NuevaEduComponent},
+    {path:'editarEdu/:id', component:EditarEduComponent}
+
 
     //debo agregar esto a las rutas que solo quiera que entren los loqueados y el rol 
     //,CanActivate: [guard],data:{expectedRol:['admin','user']}
