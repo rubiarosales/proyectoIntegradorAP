@@ -15,7 +15,7 @@ export class ProyectSectionComponent implements OnInit {
   proyectList:any;
 
   constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private proyectoService:ProyectoService) { }
-  inLogged=false;
+  isLogged=false;
     ngOnInit(): void {
 //     this.datosPortfolio.obtenerDatos().subscribe(data=>{
 //     this.proyectList=data.proyects;
@@ -24,9 +24,9 @@ export class ProyectSectionComponent implements OnInit {
 // }
 if (this.tokenService.getToken()){
   this.cargarProyecto();
-  this.inLogged=true;
+  this.isLogged=true;
 }else{
-  this.inLogged=false;
+  this.isLogged=false;
 }
 }
 

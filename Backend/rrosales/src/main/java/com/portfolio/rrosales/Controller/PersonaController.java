@@ -1,10 +1,14 @@
 
 package com.portfolio.rrosales.Controller;
 
+import com.portfolio.rrosales.Dto.dtoPersona;
 import com.portfolio.rrosales.Entity.Persona;
 import com.portfolio.rrosales.Interface.IPersonaService;
+import com.portfolio.rrosales.Security.Controller.Mensaje;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,7 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -41,28 +44,19 @@ public class PersonaController {
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable long id,
-                              @RequestParam ("nombre") String nuevoNombre,
-                              @RequestParam ("apellido") String nuevoApellido,
-                              @RequestParam ("titulo") String nuevoTitulo,
-                              @RequestParam ("domicilio") String nuevoDomicilio,
-                              @RequestParam ("telefono") String nuevoTelefono,
-                              @RequestParam ("email") String nuevoEmail,
-                              @RequestParam ("sobre_mi") String nuevoSobreMi,
-                              @RequestParam ("url_foto") String nuevoUrlFoto) {
+    public ResponseEntity editPersona(@PathVariable("id") long id, @RequestBody dtoPersona dtoPersona) {
         Persona persona =ipersonaService.findPersona(id);
-            persona.setNombre(nuevoNombre);
-            persona.setApellido(nuevoApellido);
-            persona.setTitulo(nuevoTitulo);
-            persona.setDomicilio(nuevoDomicilio);
-            persona.setDomicilio(nuevoDomicilio);
-            persona.setTelefono(nuevoTelefono);
-            persona.setEmail(nuevoEmail);
-            persona.setSobre_mi(nuevoSobreMi);
-            persona.setUrl_foto(nuevoUrlFoto);
+            persona.setNombre(dtoPersona.getNombre());
+            persona.setApellido(dtoPersona.getApellido());
+            persona.setTitulo(dtoPersona.getTitulo());
+            persona.setDomicilio(dtoPersona.getDomicilio());
+            persona.setTelefono(dtoPersona.getTelefono());
+            persona.setEmail(dtoPersona.getEmail());
+            persona.setSobre_mi(dtoPersona.getSobre_mi());
+            persona.setUrl_foto(dtoPersona.getUrl_foto());
             
             ipersonaService.savePersona(persona);
-            return persona;
+            return new ResponseEntity(new Mensaje("Persona actualizada correctamente"), HttpStatus.OK);
     }  
 
     @GetMapping("/personas/traer/perfil")

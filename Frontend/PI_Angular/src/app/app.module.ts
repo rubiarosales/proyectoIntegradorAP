@@ -21,6 +21,12 @@ import { RegistrarComponent } from './auth/registrar/registrar.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 import { LoginBarComponent } from './login-bar/login-bar.component';
 import { interceptorProvider } from './interceptors/persona-interceptor.service';
+import { RedesSocialesComponent } from './redes-sociales/redes-sociales.component';
+import { NuevaExpComponent } from './nueva-exp/nueva-exp.component';
+import { EditarExpComponent } from './editar-exp/editar-experiencia.component';
+import { NuevaEduComponent } from './nueva-edu/nueva-edu.component';
+import { EditarEduComponent } from './editar-edu/editar-edu.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +43,12 @@ import { interceptorProvider } from './interceptors/persona-interceptor.service'
     LoginComponent,
     RegistrarComponent,
     RecuperarComponent,
-    LoginBarComponent
+    LoginBarComponent,
+    RedesSocialesComponent,
+    NuevaExpComponent,
+    EditarExpComponent,
+    NuevaEduComponent,
+    EditarEduComponent
   ],
   imports: [
     BrowserModule,

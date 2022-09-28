@@ -1,0 +1,32 @@
+
+
+
+<div class="social-section">
+    <div class="social-bar">
+        <button class="cerrarMenu-responsive" aria-label="abrir menu">
+            <img src="assets/img/close_icon.svg" alt="Menu responive">
+        </button>
+        <a *ngFor="let redes of red" [href]="redes.url_red" target="_blank" class="twitter">
+            <img [src]="redes.url_logo" alt="logo de twitter" class="twitter-logo">
+            <p class="nombre-redes">{{redes.nombre}}</p>
+        </a>
+
+        <!-- <a [href]="miPortfolio.linkedin" target="_blank" class="linkedin">
+            <img src="assets/img/linkedin_icon.svg" alt="logo de linkedin" class="linkedin-logo">
+            <p class="nombre-redes">Linkedin</p>
+        </a>
+        <a [href]="miPortfolio.instagram" target="_blank" class="instagram">
+            <img src="assets/img/instagram_icon.svg" alt="logo de instagram" class="instagram-logo">
+            <p class="nombre-redes">Instagram</p>
+        </a> -->
+        <!-- <button class="boton-edicion" aria-label="editar">
+            <img src="img/edit_icon.svg" alt="Icono de edición">
+        </button> -->
+
+
+    </div>
+    <button class="abrirMenu-responsive" aria-label="abrir menu">
+        <img src="assets/img/bars-solid.svg" alt="Menu responive">
+    </button>
+    <app-login-bar></app-login-bar>
+</div>

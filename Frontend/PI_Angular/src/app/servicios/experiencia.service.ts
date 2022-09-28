@@ -20,7 +20,7 @@ public detail (id:number): Observable<Experiencia>{
 }
 
 public save (experiencia:Experiencia): Observable<any>{
-  return this.http.post<any>(this.expURL+'crear',experiencia);
+  return this.http.post<any>(this.expURL+`crear`,experiencia);
 }
 
 public update (id:number,experiencia:Experiencia): Observable<any>{

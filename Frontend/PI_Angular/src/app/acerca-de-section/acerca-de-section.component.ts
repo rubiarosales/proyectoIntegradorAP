@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from '../model/persona';
 import { persona } from '../model/persona.model';
 import { PersonaService } from '../servicios/persona.service';
 import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+import { TokenService } from '../servicios/token.service';
 
 @Component({
   selector: 'acerca-de-section',
@@ -15,15 +17,23 @@ export class AcercaDeSectionComponent implements OnInit {
   miPortfolio:any;
 
   constructor(private datosPortfolio:PortfolioServiceService,
-              public personaService:PersonaService) { }
-
+    private tokenService:TokenService, private personaService:PersonaService) { }
+    isLogged=false;
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.miPortfolio=data;
-    });
+    // this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    //   this.miPortfolio=data;
+    // });
 
-    this.personaService.getPersona().subscribe(data=>{
-      this.persona=data;});
+    if (this.tokenService.getToken()){
+      this.cargarPersona();
+      this.isLogged=true;
+    }else{
+      this.isLogged=false;
+    }
   }
 
+  cargarPersona():void{
+    this.personaService.getPersona().subscribe(
+      data =>{this.persona = data})
+  }
 }

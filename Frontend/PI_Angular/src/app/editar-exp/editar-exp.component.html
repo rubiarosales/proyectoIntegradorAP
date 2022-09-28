@@ -1,0 +1,10 @@
+<div *ngIf="editExp">
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onEdit()" novalidate>
+        <input type="text" name="empresa" placeholder="Empresa" [(ngModel)]="editExp.empresa" required>
+        <input type="text" name="cargo" placeholder="Cargo ocupado" [(ngModel)]="editExp.cargo" required>
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="editExp.fecha" required>
+        <textarea name="descripcion_cargo" id="descripcion_cargo" cols="50" rows="10" [(ngModel)]="editExp.descripcion_cargo" required>Breve descripcion del cargo</textarea>
+        <input type="text" name="url_logo" placeholder="URL del logo de la empresa" [(ngModel)]="editExp.url_logo" required>
+        <button type="submit" class="btn-add">Guardar</button>
+    </form>
+    </div>

@@ -1,46 +1,32 @@
-package com.portfolio.rrosales.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+package com.portfolio.rrosales.Dto;
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+import javax.validation.constraints.NotBlank;
+
+
+public class dtoPersona {
+
+    @NotBlank
     private String nombre;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @NotBlank
     private String apellido;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @NotBlank
     private String titulo;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @NotBlank
     private String domicilio;
-    @NotNull
-    @Size (min=8,max=12,message="No cumple con la longitud")
+    @NotBlank
     private String telefono;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @NotBlank
     private String email;
-    @NotNull
-    @Size (min=1,max=300,message="No cumple con la longitud")
+    @NotBlank
     private String sobre_mi;
-    @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @NotBlank
     private String url_foto;
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String titulo, String domicilio, String telefono, String email, String sobre_mi, String url_foto) {
+    public dtoPersona(String nombre, String apellido, String titulo, String domicilio, String telefono, String email, String sobre_mi, String url_foto) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
@@ -49,15 +35,6 @@ public class Persona {
         this.email = email;
         this.sobre_mi = sobre_mi;
         this.url_foto = url_foto;
-    }
-
-    
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -123,6 +100,7 @@ public class Persona {
     public void setUrl_foto(String url_foto) {
         this.url_foto = url_foto;
     }
+    
     
     
 }

@@ -26,16 +26,41 @@
     --fontfamily-web: Hepta Slab;
     --HeaderFooter-Size: 7rem;
 }
+.btn-add{
+   width:max-content;
+   padding: 10px;
+    z-index: 950;
+    border: none;
+    background-color:var(--color-primario) ;
+    color: var(--color-texto-secundario);
+    pointer-events: all;
+}
 
 .boton-edicion{
-    display: none;
+    /* display: none; */
     position: absolute;
     z-index: 950;
-    right:0;
+    right:50px;
+    top:10px;
     border: none;
     background-color: #00000000 ;
     pointer-events: all;
 }
+
+.boton-eliminar{
+    position: absolute;
+    z-index: 1000;
+    right:10px;
+    top:10px;
+    border: none;
+    background-color: #00000000 ;
+    pointer-events: all;
+
+}
+.boton-eliminar img{
+    width: 4rem;
+}
+
 
 .boton-edicion img{
     width: 4rem;

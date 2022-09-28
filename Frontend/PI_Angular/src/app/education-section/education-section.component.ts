@@ -16,7 +16,7 @@ export class EducationSectionComponent implements OnInit {
   educationList:any;
 
   constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private educacionService:EducacionService) { }
-  inLogged=false;
+  isLogged=false;
 
   ngOnInit(): void {
   //   this.datosPortfolio.obtenerDatos().subscribe(data=>{
@@ -26,9 +26,9 @@ export class EducationSectionComponent implements OnInit {
 
   if (this.tokenService.getToken()){
     this.cargarEducacion();
-    this.inLogged=true;
+    this.isLogged=true;
   }else{
-    this.inLogged=false;
+    this.isLogged=false;
   }
 }
 

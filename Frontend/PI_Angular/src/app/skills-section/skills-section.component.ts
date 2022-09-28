@@ -16,7 +16,7 @@ export class SkillsSectionComponent implements OnInit {
   skillList:any;
 
   constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private habilidadesService:HabilidadesService) { }
-  inLogged=false;
+  isLogged=false;
   ngOnInit(): void {
 //     this.datosPortfolio.obtenerDatos().subscribe(data=>{
 //     this.skillList=data.skills;
@@ -26,9 +26,9 @@ export class SkillsSectionComponent implements OnInit {
 
 if (this.tokenService.getToken()){
   this.cargarHabilidad();
-  this.inLogged=true;
+  this.isLogged=true;
 }else{
-  this.inLogged=false;
+  this.isLogged=false;
 }
 }
 

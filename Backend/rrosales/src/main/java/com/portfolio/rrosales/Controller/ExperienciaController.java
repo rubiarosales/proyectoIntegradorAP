@@ -33,6 +33,10 @@ public class ExperienciaController {
         List<Experiencia> listaE = iExperienciaService.listaExperiencia();
         return new ResponseEntity(listaE, HttpStatus.OK);
     }
+    
+    
+    
+    
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
@@ -47,6 +51,14 @@ public class ExperienciaController {
         iExperienciaService.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada correctamente"), HttpStatus.OK);
+    }
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Experiencia> getById(@PathVariable("id") long id){
+        if(!iExperienciaService.existsById(id))
+            return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.NOT_FOUND);
+        Experiencia experiencia = iExperienciaService.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
     }
 
     @PreAuthorize("hasRole('ADMIN')")

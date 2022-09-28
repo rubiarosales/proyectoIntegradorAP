@@ -34,6 +34,14 @@ public class EducacionController {
         List<Educacion> listaEdu = iEducacionService.listaEducacion();
         return new ResponseEntity(listaEdu, HttpStatus.OK);
     }
+    
+       @GetMapping("/detail/{id}")
+    public ResponseEntity<Educacion> getById(@PathVariable("id") long id){
+        if(!iEducacionService.existsById(id))
+            return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.NOT_FOUND);
+        Educacion educacion = iEducacionService.getOne(id).get();
+        return new ResponseEntity(educacion, HttpStatus.OK);
+    }
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")

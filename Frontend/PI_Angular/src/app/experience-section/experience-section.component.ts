@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Experiencia } from '../model/experiencia';
 import { ExperienciaService } from '../servicios/experiencia.service';
 import { PortfolioServiceService } from '../servicios/portfolio-service.service';
@@ -15,8 +16,8 @@ export class ExperienceSectionComponent implements OnInit {
 
   experienceList:any;
 
-  constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private experienciaService:ExperienciaService) { }
-inLogged=false;
+  constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private experienciaService:ExperienciaService, private router:Router) { }
+isLogged=false;
   ngOnInit(): void {
     
     // this.datosPortfolio.obtenerDatos().subscribe(data=>{
@@ -25,9 +26,9 @@ inLogged=false;
 
     if (this.tokenService.getToken()){
       this.cargarExperiencia();
-      this.inLogged=true;
+      this.isLogged=true;
     }else{
-      this.inLogged=false;
+      this.isLogged=false;
     }
   }
 
@@ -35,4 +36,22 @@ inLogged=false;
     this.experienciaService.listaExperiencia().subscribe(
       data =>{this.exp = data})
   }
-}
+
+  deleteExp(id?:number){
+    if(id!=undefined){
+      this.experienciaService.delete(id).subscribe(
+        { next: data =>{
+           this.cargarExperiencia();
+         },
+         error: err =>{
+           alert("No se pudo eliminar la experiencia");
+           this.router.navigate(['']);
+         }
+       }
+       )
+     }
+    }
+
+  }
+
+
