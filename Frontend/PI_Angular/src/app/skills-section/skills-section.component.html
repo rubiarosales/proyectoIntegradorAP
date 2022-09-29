@@ -13,12 +13,16 @@
     </div>
 </div> -->
 <div class="skills-section">
-    <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
-    </button>
     <h2 class="skill-title section-titles">HABILIDADES</h2>
+    <button class="btn-add" type="button" routerLink="/agregarSkill" *ngIf="isLogged">Agregar (+)</button>
     <div class="skill-container">
         <div *ngFor="let habilidad of hab" class="skill-item-container">
+            <button class="boton-edicion" routerLink="/editarSkill/{{habilidad.id}}" aria-label="editar" *ngIf="isLogged" >
+                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+            </button>
+            <button class="boton-eliminar" (click)="deleteSkill(habilidad.id)" aria-label="eliminar" *ngIf="isLogged" >
+                <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
+            </button>
             <h3 class="skill-name">{{habilidad.habilidad}}</h3>
             <h4 class="skill-level">{{habilidad.nivel}}</h4>
             <div class="skill-graphic"></div>

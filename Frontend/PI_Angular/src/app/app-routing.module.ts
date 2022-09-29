@@ -8,6 +8,8 @@ import { NuevaExpComponent } from "./nueva-exp/nueva-exp.component";
 import { EditarExpComponent } from "./editar-exp/editar-experiencia.component";
 import { NuevaEduComponent } from "./nueva-edu/nueva-edu.component";
 import { EditarEduComponent } from "./editar-edu/editar-edu.component";
+import { NuevaSkillComponent } from "./skills-section/nueva-skill/nueva-skill.component";
+import { EditarSkillComponent } from "./skills-section/editar-skill/editar-skill.component";
 
 
 const routes: Routes=[
@@ -18,7 +20,9 @@ const routes: Routes=[
     {path:'agregarExp', component:NuevaExpComponent},
     {path:'editarExp/:id', component:EditarExpComponent},
     {path:'agregarEdu', component:NuevaEduComponent},
-    {path:'editarEdu/:id', component:EditarEduComponent}
+    {path:'editarEdu/:id', component:EditarEduComponent},
+    {path:'agregarSkill', component:NuevaSkillComponent},
+    {path:'editarSkill/:id', component:EditarSkillComponent}
 
 
     //debo agregar esto a las rutas que solo quiera que entren los loqueados y el rol 

@@ -21,6 +21,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     .skill-name{
         font-size: var(--fontsize-subtitulos);

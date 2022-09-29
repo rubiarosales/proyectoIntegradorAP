@@ -26,6 +26,8 @@ import { NuevaExpComponent } from './nueva-exp/nueva-exp.component';
 import { EditarExpComponent } from './editar-exp/editar-experiencia.component';
 import { NuevaEduComponent } from './nueva-edu/nueva-edu.component';
 import { EditarEduComponent } from './editar-edu/editar-edu.component';
+import { NuevaSkillComponent } from './skills-section/nueva-skill/nueva-skill.component';
+import { EditarSkillComponent } from './skills-section/editar-skill/editar-skill.component';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { EditarEduComponent } from './editar-edu/editar-edu.component';
     NuevaExpComponent,
     EditarExpComponent,
     NuevaEduComponent,
-    EditarEduComponent
+    EditarEduComponent,
+    NuevaSkillComponent,
+    EditarSkillComponent
   ],
   imports: [
     BrowserModule,

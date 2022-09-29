@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Habilidades } from '../model/habilidades';
 import { HabilidadesService } from '../servicios/habilidades.service';
 import { PortfolioServiceService } from '../servicios/portfolio-service.service';
@@ -12,28 +13,44 @@ import { TokenService } from '../servicios/token.service';
 })
 export class SkillsSectionComponent implements OnInit {
 
-  hab:Habilidades[]=[];
-  skillList:any;
+  hab: Habilidades[] = [];
+  skillList: any;
 
-  constructor(private datosPortfolio:PortfolioServiceService,private tokenService:TokenService, private habilidadesService:HabilidadesService) { }
-  isLogged=false;
+  constructor(private datosPortfolio: PortfolioServiceService, private tokenService: TokenService, private habilidadesService: HabilidadesService, private router: Router) { }
+  isLogged = false;
   ngOnInit(): void {
-//     this.datosPortfolio.obtenerDatos().subscribe(data=>{
-//     this.skillList=data.skills;
-//     });
-//   }
-// }
 
-if (this.tokenService.getToken()){
-  this.cargarHabilidad();
-  this.isLogged=true;
-}else{
-  this.isLogged=false;
-}
-}
+    //     this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    //     this.skillList=data.skills;
+    //     });
+    //   }
+    // }
 
-cargarHabilidad():void{
-this.habilidadesService.listaHabilidades().subscribe(
-  data =>{this.hab = data})
-}
+    if (this.tokenService.getToken()) {
+      this.cargarHabilidad();
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarHabilidad(): void {
+    this.habilidadesService.listaHabilidades().subscribe(
+      data => { this.hab = data })
+  }
+
+
+  deleteSkill(id?:number) {
+    if(id!=undefined){
+    this.habilidadesService.delete(id).subscribe(
+      { next: data =>{
+        this.cargarHabilidad();
+      },
+      error: err=>{
+        alert("No se pudo eliminar la habilidad");
+        this.router.navigate(['']);
+      }}
+    )
+
+     } }
 }

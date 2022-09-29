@@ -1,0 +1,8 @@
+<div >
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onEdit()" novalidate>
+        <input type="text" name="habilidad" placeholder="Habilidad" [(ngModel)]="editSkill.habilidad" required>
+        <input type="text" name="cargo" placeholder="Nivel de conocimiento (0-100)" [(ngModel)]="editSkill.nivel" required>
+        <button type="submit" class="btn-add">Guardar</button>
+    </form>
+    </div>
+    

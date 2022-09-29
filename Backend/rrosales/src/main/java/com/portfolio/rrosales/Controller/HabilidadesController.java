@@ -35,6 +35,15 @@ public class HabilidadesController {
         List<Habilidades> listaHab = iHabilidadesService.listaHabilidades();
         return new ResponseEntity(listaHab, HttpStatus.OK);
     }
+    
+       @GetMapping("/detail/{id}")
+    public ResponseEntity<Habilidades> getById(@PathVariable("id") long id){
+        if(!iHabilidadesService.existsById(id))
+            return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.NOT_FOUND);
+        Habilidades habilidades = iHabilidadesService.getOne(id).get();
+        return new ResponseEntity(habilidades, HttpStatus.OK);
+    }
+    
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")

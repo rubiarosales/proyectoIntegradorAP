@@ -1,0 +1,8 @@
+<div >
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onAdd()" novalidate>
+        <input type="text" name="habilidad" placeholder="Habilidad" [(ngModel)]="habilidad" required>
+        <input type="text" name="cargo" placeholder="Nivel de conocimiento (0-100)" [(ngModel)]="nivel" required>
+        <button type="submit" class="btn-add">Agregar</button>
+    </form>
+    </div>
+    
