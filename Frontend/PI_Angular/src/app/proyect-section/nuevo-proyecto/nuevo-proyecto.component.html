@@ -1,0 +1,10 @@
+<div >
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onAdd()" novalidate>
+        <input type="text" name="titulo" placeholder="Nombre del proyecto" [(ngModel)]="titulo" required>
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="fecha" required>
+        <input type="text" name="url_img" placeholder="Imagen del proyecto" [(ngModel)]="url_img" required>
+        <input type="text" name="url_proyecto" placeholder="URL del proyecto" [(ngModel)]="url_proyecto" required>
+        <button type="submit" class="btn-add">Agregar</button>
+    </form>
+    </div>
+    

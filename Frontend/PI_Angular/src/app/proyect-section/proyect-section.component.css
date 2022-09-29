@@ -1,4 +1,11 @@
     /* ESTILOS DE LA SECCION DE PROYECTOS */
+    .proyect-section{
+        position: relative;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+    
     .proyect-container {
         display: flex;
         flex-direction: column;
@@ -17,6 +24,7 @@
         height: 80vw;
         border: var(--color-primario) solid 1px;
         border-radius: 0px 0px 20% 20%;
+        position: relative;
     }
 
     .proyect-item-container a {

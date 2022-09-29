@@ -1,0 +1,10 @@
+<div >
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onEdit()" novalidate>
+        <input type="text" name="titulo" placeholder="Nombre del proyecto" [(ngModel)]="editProyecto.titulo" required>
+        <input type="text" name="fecha" placeholder="Fecha" [(ngModel)]="editProyecto.fecha" required>
+        <input type="text" name="url_img" placeholder="Imagen del proyecto" [(ngModel)]="editProyecto.url_img" required>
+        <input type="text" name="url_proyecto" placeholder="URL del proyecto" [(ngModel)]="editProyecto.url_proyecto" required>
+        <button type="submit" class="btn-add">Guardar</button>
+    </form>
+    </div>
+    

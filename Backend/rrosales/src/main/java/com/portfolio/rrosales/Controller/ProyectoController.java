@@ -24,16 +24,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/proyectos")
 @CrossOrigin(origins = "http://localhost:4200")
 public class ProyectoController {
-    
+
     @Autowired
     ImpProyectoService iProyectoService;
-    
+
     @GetMapping("/traer")
     public ResponseEntity<List<Proyecto>> listaProyecto() {
-        List<Proyecto> listaHab = iProyectoService.listaProyecto();
-        return new ResponseEntity(listaHab, HttpStatus.OK);
+        List<Proyecto> listaProy = iProyectoService.listaProyecto();
+        return new ResponseEntity(listaProy, HttpStatus.OK);
     }
-    
+
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Proyecto> getById(@PathVariable("id") long id) {
+        if (!iProyectoService.existsById(id)) {
+            return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.NOT_FOUND);
+        }
+        Proyecto proyecto = iProyectoService.getOne(id).get();
+        return new ResponseEntity(proyecto, HttpStatus.OK);
+    }
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoProyecto dtoPro) {
@@ -45,10 +54,10 @@ public class ProyectoController {
         }
         Proyecto proyecto = new Proyecto(dtoPro.getTitulo(), dtoPro.getFecha(), dtoPro.getUrl_img(), dtoPro.getUrl_proyecto());
         iProyectoService.save(proyecto);
-        
+
         return new ResponseEntity(new Mensaje("Proyecto agregado correctamente"), HttpStatus.OK);
     }
-    
+
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody dtoProyecto dtoPro) {
@@ -61,17 +70,17 @@ public class ProyectoController {
         if (StringUtils.isBlank(dtoPro.getTitulo())) {
             return new ResponseEntity(new Mensaje("El titulo de proyecto es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        
+
         Proyecto proyecto = iProyectoService.getOne(id).get();
         proyecto.setTitulo(dtoPro.getTitulo());
         proyecto.setFecha(dtoPro.getFecha());
         proyecto.setUrl_img(dtoPro.getUrl_img());
         proyecto.setUrl_proyecto(dtoPro.getUrl_proyecto());
-        
+
         iProyectoService.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizado correctamente"), HttpStatus.OK);
     }
-    
+
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity delete(@PathVariable long id) {
@@ -80,6 +89,6 @@ public class ProyectoController {
         }
         iProyectoService.delete(id);
         return new ResponseEntity(new Mensaje("El proyecto fue eliminado correctamente"), HttpStatus.OK);
-    }    
-    
+    }
+
 }

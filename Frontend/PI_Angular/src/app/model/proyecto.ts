@@ -7,7 +7,6 @@ export class Proyecto {
 
     constructor(
         titulo: string,
-        empresa: string,
         fecha: string,
         url_img: string,
         url_proyecto: string) {

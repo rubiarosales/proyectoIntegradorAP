@@ -16,12 +16,16 @@
 </div> -->
 
 <div class="proyect-section">
-    <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
-    </button>
-    <h2 class="proyect-title section-titles">PROYECTOS</h2>
+       <h2 class="proyect-title section-titles">PROYECTOS</h2>
+       <button class="btn-add" type="button" routerLink="/agregarProyecto" *ngIf="isLogged">Agregar (+)</button>
     <div class="proyect-container">
         <div *ngFor="let proyecto of proy" class="proyect-item-container">
+            <button class="boton-edicion" routerLink="/editarProyecto/{{proyecto.id}}" aria-label="editar" *ngIf="isLogged" >
+                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+            </button>
+            <button class="boton-eliminar" (click)="deleteProyecto(proyecto.id)" aria-label="eliminar" *ngIf="isLogged" >
+                <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
+            </button>
             <h3 class="proyect-name">{{proyecto.titulo}}</h3>
             <h4 class="proyect-date">{{proyecto.fecha}}</h4>
             <div class="proyect-img">

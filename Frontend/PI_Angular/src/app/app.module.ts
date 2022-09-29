@@ -28,6 +28,8 @@ import { NuevaEduComponent } from './nueva-edu/nueva-edu.component';
 import { EditarEduComponent } from './editar-edu/editar-edu.component';
 import { NuevaSkillComponent } from './skills-section/nueva-skill/nueva-skill.component';
 import { EditarSkillComponent } from './skills-section/editar-skill/editar-skill.component';
+import { NuevoProyectoComponent } from './proyect-section/nuevo-proyecto/nuevo-proyecto.component';
+import { EditarProyectoComponent } from './proyect-section/editar-proyecto/editar-proyecto.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { EditarSkillComponent } from './skills-section/editar-skill/editar-skill
     NuevaEduComponent,
     EditarEduComponent,
     NuevaSkillComponent,
-    EditarSkillComponent
+    EditarSkillComponent,
+    NuevoProyectoComponent,
+    EditarProyectoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
 /* (MOBILE FIRST) */
 /* ESTILOS DEL BANNER */
-
 .banner-container{
     background-color: var(--color-secundario);
     position: relative;
+    margin-top: var(--HeaderFooter-Size);
     width: 100%;
     height: 35vh;
     max-height: 600px;
@@ -21,6 +21,7 @@
 /* ESTILOS DEL BANNER */
 @media only screen   and (min-width: 769px){
     .banner-container{
+        margin-top: var(--HeaderFooter-Size);
         height: 45vh;
     }
     .banner-img{

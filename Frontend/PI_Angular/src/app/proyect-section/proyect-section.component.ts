@@ -34,4 +34,16 @@ cargarProyecto():void{
 this.proyectoService.listaProyecto().subscribe(
   data =>{this.proy = data})
 }
+
+deleteProyecto(id?:number){
+  if(id!=undefined){
+  this.proyectoService.delete(id).subscribe(
+    { next: data => {
+      this.cargarProyecto();
+    },
+  error: err => {
+    alert ("No se pudo eliminar el proyecto");
+  }}
+  )
+}}
 }
