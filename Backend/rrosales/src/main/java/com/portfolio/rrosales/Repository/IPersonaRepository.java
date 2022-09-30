@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IPersonaRepository extends JpaRepository<Persona,Long>{
-   
-    
+
+       public Optional <Persona> findByEmail (String email);
+    public boolean existsByEmail(String email);
 }

@@ -1,0 +1,13 @@
+<div *ngIf="editPersona">
+    <form  #f="ngForm"  class="form-container" (ngSubmit)="onEdit()" novalidate>
+        <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="editPersona.nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="editPersona.apellido" required>
+        <input type="text" name="titulo" placeholder="Titulo" [(ngModel)]="editPersona.titulo" required>
+        <input type="text" name="domicilio" placeholder="Domicilio" [(ngModel)]="editPersona.domicilio" required>
+        <input type="text" name="telefono" placeholder="Telefono de contacto" [(ngModel)]="editPersona.telefono" required>
+        <input type="email" name="email" placeholder="email" [(ngModel)]="editPersona.email" required>
+        <textarea name="sobre_mi" id="descripcion_cargo" cols="50" rows="10" [(ngModel)]="editPersona.sobre_mi" required>Breve descripcion del cargo</textarea>
+        <input type="text" name="url_foto" placeholder="URL de la foto de perfil" [(ngModel)]="editPersona.url_foto" required>
+        <button type="submit" class="btn-add">Guardar</button>
+    </form>
+    </div>

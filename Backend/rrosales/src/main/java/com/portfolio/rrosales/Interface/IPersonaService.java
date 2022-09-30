@@ -14,4 +14,8 @@ public interface IPersonaService {
     public void deletePersona (long id);
     
     public Persona findPersona(long id);
+    
+    
+    public boolean existsById(long id);
+    
 }

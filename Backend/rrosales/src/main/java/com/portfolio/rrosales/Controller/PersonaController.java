@@ -17,34 +17,36 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins ="http://localhost:4200")
+@RequestMapping("/personas")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
-    @GetMapping("/personas/traer")
+    @GetMapping("/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
    
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/personas/crear")
+    @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";   
     }
     @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/personas/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable long id) {
         ipersonaService.deletePersona(id);
         return "La persona fue eliminada correctamente";
     }  
     
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/personas/editar/{id}")
-    public ResponseEntity editPersona(@PathVariable("id") long id, @RequestBody dtoPersona dtoPersona) {
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody dtoPersona dtoPersona) {
         Persona persona =ipersonaService.findPersona(id);
             persona.setNombre(dtoPersona.getNombre());
             persona.setApellido(dtoPersona.getApellido());
@@ -58,8 +60,17 @@ public class PersonaController {
             ipersonaService.savePersona(persona);
             return new ResponseEntity(new Mensaje("Persona actualizada correctamente"), HttpStatus.OK);
     }  
+    
+       @GetMapping("/detail/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id") long id) {
+        if (!ipersonaService.existsById(id)) {
+            return new ResponseEntity(new Mensaje("El ID solicitado no existe"), HttpStatus.NOT_FOUND);
+        }
+        Persona persona = ipersonaService.findPersona(id);
+        return new ResponseEntity(persona, HttpStatus.OK);
+    }
 
-    @GetMapping("/personas/traer/perfil")
+    @GetMapping("/traer/perfil")
     public Persona findPersona() {
         return ipersonaService.findPersona((long) 1);
         
