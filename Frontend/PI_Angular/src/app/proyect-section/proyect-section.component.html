@@ -1,6 +1,6 @@
 <!-- <div class="proyect-section">
     <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+        <img src="assets/img/edit_icon.png" alt="Icono de edición">
     </button>
     <h2 class="proyect-title section-titles">PROYECTOS</h2>
     <div class="proyect-container">
@@ -21,7 +21,7 @@
     <div class="proyect-container">
         <div *ngFor="let proyecto of proy" class="proyect-item-container">
             <button class="boton-edicion" routerLink="/editarProyecto/{{proyecto.id}}" aria-label="editar" *ngIf="isLogged" >
-                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+                <img src="assets/img/edit_icon.png" alt="Icono de edición">
             </button>
             <button class="boton-eliminar" (click)="deleteProyecto(proyecto.id)" aria-label="eliminar" *ngIf="isLogged" >
                 <img src="assets/img/delete_icon.png" alt="Icono de eliminar">

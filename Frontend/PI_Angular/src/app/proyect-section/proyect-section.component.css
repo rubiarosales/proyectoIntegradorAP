@@ -23,7 +23,7 @@
         width: 65vw;
         height: 80vw;
         border: var(--color-primario) solid 1px;
-        border-radius: 0px 0px 20% 20%;
+        border-radius: 0 16% 16% 0;
         position: relative;
     }
 
@@ -78,7 +78,7 @@
             max-width: 45rem;
             max-height: 55rem;
             border: var(--color-primario) solid 2px;
-            border-radius: 0px 0px 20% 20%;
+            
         }
 
         .proyect-item-container a {

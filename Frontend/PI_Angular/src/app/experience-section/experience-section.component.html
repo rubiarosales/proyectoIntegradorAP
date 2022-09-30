@@ -3,14 +3,7 @@
     <button class="btn-add" type="button" routerLink="/agregarExp" *ngIf="isLogged">Agregar (+)</button>
     <div class="experiences-container">
         <div *ngFor="let experiencia of exp" class="experience-item-container">
-      
-                <button class="boton-edicion" routerLink="/editarExp/{{experiencia.id}}" aria-label="editar" *ngIf="isLogged" >
-                    <img src="assets/img/edit_icon.svg" alt="Icono de edición">
-                </button>
-                <button class="boton-eliminar" (click)="deleteExp(experiencia.id)" aria-label="eliminar" *ngIf="isLogged" >
-                    <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
-                </button>
-           
+         
             <div class="experience-item-front">
                 <div class="experience-details">
                     <h3 class="experience-place"> {{experiencia.empresa}}</h3>
@@ -24,6 +17,14 @@
             <div class="experience-item-reverse">
                 <p class="experience-description">{{experiencia.descripcion_cargo}}</p>
             </div>
+
+    <button class="boton-edicion" routerLink="/editarExp/{{experiencia.id}}" aria-label="editar" *ngIf="isLogged" >
+        <img src="assets/img/edit_icon.png" alt="Icono de edición">
+    </button>
+    <button class="boton-eliminar" (click)="deleteExp(experiencia.id)" aria-label="eliminar" *ngIf="isLogged" >
+        <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
+    </button>
+
         </div>
     </div>
 </div>

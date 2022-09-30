@@ -1,6 +1,6 @@
 <!-- <div class="skills-section">
     <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+        <img src="assets/img/edit_icon.png" alt="Icono de edición">
     </button>
     <h2 class="skill-title section-titles">HABILIDADES</h2>
     <div class="skill-container">
@@ -18,7 +18,7 @@
     <div class="skill-container">
         <div *ngFor="let habilidad of hab" class="skill-item-container">
             <button class="boton-edicion" routerLink="/editarSkill/{{habilidad.id}}" aria-label="editar" *ngIf="isLogged" >
-                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+                <img src="assets/img/edit_icon.png" alt="Icono de edición">
             </button>
             <button class="boton-eliminar" (click)="deleteSkill(habilidad.id)" aria-label="eliminar" *ngIf="isLogged" >
                 <img src="assets/img/delete_icon.png" alt="Icono de eliminar">

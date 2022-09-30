@@ -7,7 +7,7 @@
         
         <div *ngFor="let educacion of edu" class="education-item-container">
             <button class="boton-edicion" routerLink="/editarEdu/{{educacion.id}}" aria-label="editar" *ngIf="isLogged" >
-                <img src="assets/img/edit_icon.svg" alt="Icono de edición">
+                <img src="assets/img/edit_icon.png" alt="Icono de edición">
             </button>
             <button class="boton-eliminar" (click)="deleteEdu(educacion.id)" aria-label="eliminar" *ngIf="isLogged" >
                 <img src="assets/img/delete_icon.png" alt="Icono de eliminar">

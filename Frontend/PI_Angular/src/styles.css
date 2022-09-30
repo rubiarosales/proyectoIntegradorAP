@@ -40,35 +40,51 @@
     /* display: none; */
     position: absolute;
     z-index: 950;
-    right:50px;
-    top:10px;
+    /* right:50px;
+    top:10px; */
     border: none;
     background-color: #00000000 ;
     pointer-events: all;
+    top: 0;
+    margin: 5px;
+}
+
+.education-container .boton-edicion, .education-container .boton-eliminar {
+    right: 0;
+}
+
+.acerca-de-section .boton-edicion, .banner-container .boton-edicion {
+    right: 0;
+    bottom: 0;
+}
+
+.skill-container .boton-edicion, .skill-container .boton-eliminar {
+    background-color: #ffffffa4;
+    border-radius: 20%;
+    padding: 2px;
 }
 
 .boton-eliminar{
     position: absolute;
-    z-index: 1000;
-    right:10px;
-    top:10px;
+    z-index: 950;
+    /* right:10px;
+    top:10px; */
     border: none;
     background-color: #00000000 ;
     pointer-events: all;
-
+    bottom: 0;
+    margin: 5px;
 }
 .boton-eliminar img{
-    width: 4rem;
+    width: 30px;
 }
 
 
 .boton-edicion img{
-    width: 4rem;
+   width: 25px;
 }
 
-.banner-container .boton-edicion{
-    bottom: 0;
-    }
+
     
 .section-titles{
     font-size: var(--fontsize-titulos);
@@ -86,9 +102,7 @@
     :root{
         --HeaderFooter-Size: 5rem;
     }
-    .boton-edicion img{
-        width: 5.5rem;
-    }
+
     .section-titles{
         font-size: var(--fontsize-titulos-responsive);
         text-align: center;

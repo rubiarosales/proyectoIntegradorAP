@@ -17,6 +17,8 @@
     justify-content: center;
     margin: 1.5rem;
     position: relative;
+    /* flex-direction: column; */
+
 }
 .experience-item-front{
 display: flex;
