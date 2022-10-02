@@ -54,14 +54,14 @@
     :root{
         --HeaderFooter-Size: 5rem;
     }
-    .social-bar{
+    /* .social-bar{
         width: 100%;
         height: var(--HeaderFooter-Size); 
         display: flex;
         justify-content: flex-end;
         align-items:center;
         z-index: 1000;
-    }
+    } */
     .social-bar {
         margin: 0;
         position: absolute;

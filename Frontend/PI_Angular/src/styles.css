@@ -58,7 +58,8 @@
     bottom: 0;
 }
 
-.skill-container .boton-edicion, .skill-container .boton-eliminar {
+.skill-container .boton-edicion, .skill-container .boton-eliminar,
+.experiences-container .boton-edicion, .experiences-container .boton-eliminar{
     background-color: #ffffffa4;
     border-radius: 20%;
     padding: 2px;

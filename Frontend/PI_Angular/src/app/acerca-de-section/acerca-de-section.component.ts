@@ -23,9 +23,9 @@ export class AcercaDeSectionComponent implements OnInit {
     // this.datosPortfolio.obtenerDatos().subscribe(data=>{
     //   this.miPortfolio=data;
     // });
-
+    this.cargarPersona();
     if (this.tokenService.getToken()){
-      this.cargarPersona();
+      // this.cargarPersona();
       this.isLogged=true;
     }else{
       this.isLogged=false;

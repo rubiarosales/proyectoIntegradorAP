@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CargarScriptService } from '../servicios/cargar-script.service';
 import { PortfolioServiceService } from '../servicios/portfolio-service.service';
 
 
@@ -13,9 +12,9 @@ export class headerSection implements OnInit {
 
   miPortfolio:any;
 
-  constructor(private datosPortfolio:PortfolioServiceService, private script:CargarScriptService, private router:Router) { 
+  constructor(private datosPortfolio:PortfolioServiceService, private router:Router) { 
 
-    script.cargar([`proyecto_integrador`]);
+
 
   }
 

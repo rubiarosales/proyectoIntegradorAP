@@ -22,8 +22,9 @@ export class ProyectSectionComponent implements OnInit {
 //     });
 //   }
 // }
+this.cargarProyecto();
 if (this.tokenService.getToken()){
-  this.cargarProyecto();
+  // this.cargarProyecto();
   this.isLogged=true;
 }else{
   this.isLogged=false;

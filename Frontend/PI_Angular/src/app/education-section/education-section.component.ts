@@ -25,9 +25,9 @@ export class EducationSectionComponent implements OnInit {
   //   this.educationList=data.education;
   //   });
   // }
-
+  this.cargarEducacion();
   if (this.tokenService.getToken()){
-    this.cargarEducacion();
+    // this.cargarEducacion();
     this.isLogged=true;
   }else{
     this.isLogged=false;

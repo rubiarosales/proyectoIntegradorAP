@@ -9,9 +9,12 @@ import { CargarScriptService } from './servicios/cargar-script.service';
 export class AppComponent {
   title = 'PI_Angular';
 
-  constructor(private miScript:CargarScriptService){
-    
+  constructor(script:CargarScriptService){
+    script.cargar([`proyecto_integrador`]);
   }
+
+
+
 
   
 }

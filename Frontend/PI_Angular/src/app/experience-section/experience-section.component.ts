@@ -23,9 +23,9 @@ isLogged=false;
     // this.datosPortfolio.obtenerDatos().subscribe(data=>{
     // this.experienceList=data.experience;
     // });
-
+    this.cargarExperiencia();
     if (this.tokenService.getToken()){
-      this.cargarExperiencia();
+      // this.cargarExperiencia();
       this.isLogged=true;
     }else{
       this.isLogged=false;

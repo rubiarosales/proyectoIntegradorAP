@@ -25,9 +25,9 @@ export class SkillsSectionComponent implements OnInit {
     //     });
     //   }
     // }
-
+    this.cargarHabilidad();
     if (this.tokenService.getToken()) {
-      this.cargarHabilidad();
+      // this.cargarHabilidad();
       this.isLogged = true;
     } else {
       this.isLogged = false;

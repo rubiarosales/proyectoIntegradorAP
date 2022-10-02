@@ -20,10 +20,10 @@ public class Proyecto {
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String fecha;
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @Size(min = 1, max = 100, message = "No cumple con la longitud")
     private String url_img;
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @Size(min = 1, max = 100, message = "No cumple con la longitud")
     private String url_proyecto;
 
     public Proyecto() {
