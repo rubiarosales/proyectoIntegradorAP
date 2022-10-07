@@ -1,5 +1,6 @@
 <div class="experience-section">
     <h2 class="experience-title section-titles">EXPERIENCIA</h2>
+ 
     <button class="btn-add" type="button" routerLink="/agregarExp" *ngIf="isLogged">Agregar (+)</button>
     <div class="experiences-container">
         <div *ngFor="let experiencia of exp" class="experience-item-container">
