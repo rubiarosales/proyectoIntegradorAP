@@ -7,7 +7,7 @@
             <input id="password" type="password" placeholder="********" name="password" [(ngModel)]="password" required>
 
         <button type="submit" >Entrar</button>
-        <a href="/registrar" class="registro">Si no estás registrado haz click acá</a>
+        <a href="/nuevo" class="registro">Si no estás registrado haz click acá</a>
         <a href="/recuperar" class="recupero">Olvidé mi contraseña</a>
         <p *ngIf="f.submitted && isLogginFail ">Error en el login: {{errMsj}}</p>
         

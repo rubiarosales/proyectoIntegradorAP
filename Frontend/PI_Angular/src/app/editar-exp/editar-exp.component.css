@@ -1,20 +1,22 @@
 .form-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 50%;
+    height: 450px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20% auto;
     border: 1px dotted black;
     background-color:#A0BCC7;
 }
 input, textarea{
-    margin: 5px;
+    margin: 8px;
 }
 .btn-add{
     
     width: 30%;
     height: 30px;
     min-width: fit-content;
-    margin: 20px auto;
+    margin: 30px auto;
    
 }

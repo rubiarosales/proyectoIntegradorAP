@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     if (this.tokenService.getToken()){
       this.isLogged = true;
       this.isLogginFail = false;
-      this.roles = this.tokenService.getAuthorities();
+      
     }
   }
 
@@ -39,8 +39,7 @@ export class LoginComponent implements OnInit {
       this.isLogged=true;
       this.isLogginFail=false;
       this.tokenService.setToken(data.token);
-      this.tokenService.setUserName(data.nombreUsuario);
-      this.tokenService.setAuthorities(data.authorities);
+    
       this.roles=data.authorities;
       this.router.navigate(['']);
     },

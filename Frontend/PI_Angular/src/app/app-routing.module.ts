@@ -18,7 +18,7 @@ import { EditarPersonaComponent } from "./acerca-de-section/editar-persona/edita
 const routes: Routes=[
     {path:'', component:HomeComponent},
     {path:'login', component:LoginComponent},
-    {path:'registrar', component:RegistrarComponent},
+    {path:'nuevo', component:RegistrarComponent},
     {path:'recuperar', component:RecuperarComponent},
     {path:'agregarExp', component:NuevaExpComponent},
     {path:'editarExp/:id', component:EditarExpComponent},

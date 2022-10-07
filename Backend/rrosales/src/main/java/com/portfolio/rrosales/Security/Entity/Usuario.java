@@ -25,7 +25,7 @@ public class Usuario {
     @NotNull
     @Column (unique = true)
     private String nombreUsuario;
-    @NotNull
+    @NotNull (message = "Por favor ingrese un valor")
     private String email;
     @NotNull
     private String password;

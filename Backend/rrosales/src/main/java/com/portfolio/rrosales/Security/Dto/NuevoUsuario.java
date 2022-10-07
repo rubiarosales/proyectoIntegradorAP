@@ -8,13 +8,13 @@ import javax.validation.constraints.NotBlank;
 
 
 public class NuevoUsuario {
-    @NotBlank
+    @NotBlank 
     private String nombre;
-    @NotBlank
+    @NotBlank 
     private String nombreUsuario;
-    @Email
+    @Email 
     private String email;
-    @NotBlank
+    @NotBlank 
     private String password;
     private Set<String> roles = new HashSet<>();
 

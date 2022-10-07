@@ -21,12 +21,12 @@ export class PersonaService {
      return this.http.get<Persona>(this.URL+`detail/${id}`);
    }
    
-   public save (proyecto:Persona): Observable<any>{
-     return this.http.post<any>(this.URL+'crear',proyecto);
+   public save (persona:Persona): Observable<any>{
+     return this.http.post<any>(this.URL+'crear',persona);
    }
    
-   public update (id:number,proyecto:Persona): Observable<any>{
-     return this.http.put<any>(this.URL+`actualizar/${id}`,proyecto);
+   public update (id:number,persona:Persona): Observable<any>{
+     return this.http.put<any>(this.URL+`actualizar/${id}`,persona);
    }
    
    public delete (id:number): Observable<any>{
