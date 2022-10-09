@@ -2,53 +2,49 @@
 package com.portfolio.rrosales.Service;
 
 import com.portfolio.rrosales.Entity.Persona;
-import com.portfolio.rrosales.Interface.IPersonaService;
 import com.portfolio.rrosales.Repository.IPersonaRepository;
 import java.util.List;
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ImpPersonaService implements IPersonaService{
-    @Autowired IPersonaRepository ipersonarepository;
+@Transactional
+public class ImpPersonaService {
+    @Autowired
+    IPersonaRepository iPersonaRepository;
     
-
-    @Override
-    public List<Persona> getPersona() {
-      List<Persona> persona = ipersonarepository.findAll();
-      return persona;
-    }
-
-    @Override
-    public void savePersona(Persona persona) {
-        ipersonarepository.save(persona);
-    }
-
-    @Override
-    public void deletePersona(long id) {
-        ipersonarepository.deleteById(id);
-    }
-
-    @Override
-    public Persona findPersona(long id) {
-        Persona persona = ipersonarepository.findById(id).orElse(null);
-        return persona;
-    }
-   
-    
-    @Override
-        public boolean existsById(long id) {
-        return ipersonarepository.existsById(id);
+    public List <Persona> listaPersona(){
+        return iPersonaRepository.findAll();
     }
     
-  
+    
+    public Optional<Persona> getOne(long id) {
+        return iPersonaRepository.findById(id);
+    }
+    
+    public Optional<Persona> getByEmail(String email) {
+        return iPersonaRepository.findByEmail(email);
+    }
+    
+ 
+    public void save(Persona persona) {
+        iPersonaRepository.save(persona);
+    }
+    
+    public void delete(long id) {
+        iPersonaRepository.deleteById(id);
+    }
+    
     public boolean existsByEmail(String email) {
-        return ipersonarepository.existsByEmail(email);
+        return iPersonaRepository.existsByEmail(email);
     }
- public Optional<Persona> getByEmail(String email) {
-        return ipersonarepository.findByEmail(email);
+    
+    public boolean existsById(long id) {
+        return iPersonaRepository.existsById(id);
     }
+    
 
  
 }

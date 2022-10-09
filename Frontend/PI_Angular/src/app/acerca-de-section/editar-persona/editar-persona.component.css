@@ -1,7 +1,9 @@
 .form-container{
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
+    max-width: 600px;
     padding: 20px;
     margin: 20px auto;
     border: 1px dotted black;
@@ -11,10 +13,17 @@ input, textarea{
     margin: 5px;
 }
 .btn-add{
-    
     width: 30%;
-    height: 30px;
+    height: 40px;
     min-width: fit-content;
-    margin: 20px auto;
+    margin:20px auto;
    
+}
+
+@media screen and (max-width:900px){
+    .form-container{
+        width: 90%;
+        margin: 10px auto;
+
+    }
 }

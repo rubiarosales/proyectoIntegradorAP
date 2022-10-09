@@ -1,23 +1,30 @@
 .form-container{
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 400px;
+    width: 60%;
+    max-width: 500px;
     padding: 20px;
-    margin: 20% auto;
+    margin: 20px auto;
     border: 1px dotted black;
     background-color:#A0BCC7;
 }
 input, textarea{
-    margin: 10px;
+    margin: 5px;
     height: 30px;
 }
 .btn-add{
-    
     width: 30%;
-    height: 30px;
+    height: 40px;
     min-width: fit-content;
-    margin: 30px auto;
+    margin:20px auto;
    
+}
+
+@media screen and (max-width:900px){
+    .form-container{
+        width: 90%;
+        margin: 10px auto;
+
+    }
 }

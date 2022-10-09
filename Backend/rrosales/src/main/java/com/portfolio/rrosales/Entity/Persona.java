@@ -31,10 +31,10 @@ public class Persona {
     @Size (min=1,max=50,message="No cumple con la longitud")
     private String email;
     @NotNull
-    @Size (min=1,max=300,message="No cumple con la longitud")
+    @Size (min=1,max=350,message="No cumple con la longitud")
     private String sobre_mi;
     @NotNull
-    @Size (min=1,max=50,message="No cumple con la longitud")
+    @Size (min=1,max=200,message="No cumple con la longitud")
     private String url_foto;
 
     public Persona() {
