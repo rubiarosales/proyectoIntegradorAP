@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RedesSociales } from '../model/redes-sociales';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
-import { RedesService } from '../servicios/redes.service';
-import { TokenService } from '../servicios/token.service';
+import { RedesSociales } from '../../model/redes-sociales';
+import { PortfolioServiceService } from '../../servicios/portfolio.service';
+import { RedesService } from '../../servicios/redes.service';
+import { TokenService } from '../../servicios/token.service';
 
 @Component({
   selector: 'app-redes-sociales',

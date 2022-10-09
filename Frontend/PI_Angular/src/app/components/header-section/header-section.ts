@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+import { PortfolioServiceService } from '../../servicios/portfolio.service';
 
 
 @Component({

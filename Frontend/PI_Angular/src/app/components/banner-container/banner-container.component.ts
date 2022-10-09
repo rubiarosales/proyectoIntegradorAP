@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
-import { TokenService } from '../servicios/token.service';
+import { PortfolioServiceService } from '../../servicios/portfolio.service';
+import { TokenService } from '../../servicios/token.service';
 
 
 @Component({

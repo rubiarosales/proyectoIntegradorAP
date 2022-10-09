@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CargarScriptService } from '../servicios/cargar-script.service';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
-import { TokenService } from '../servicios/token.service';
+import { CargarScriptService } from '../../servicios/cargar-script.service';
+import { PortfolioServiceService } from '../../servicios/portfolio.service';
+import { TokenService } from '../../servicios/token.service';
 
 @Component({
   selector: 'app-login-bar',

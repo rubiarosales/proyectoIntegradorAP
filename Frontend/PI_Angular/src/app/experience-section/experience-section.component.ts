@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from '../model/experiencia';
 import { ExperienciaService } from '../servicios/experiencia.service';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+import { PortfolioServiceService } from '../servicios/portfolio.service';
 import { TokenService } from '../servicios/token.service';
 
 @Component({

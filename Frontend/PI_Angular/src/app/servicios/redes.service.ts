@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { RedesSociales } from '../model/redes-sociales';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RedesService {
-  redURL = 'http://localhost:8080/redes/';
+  redURL =environment.URL+'redes/';
 
   constructor(private http:HttpClient) {}
   

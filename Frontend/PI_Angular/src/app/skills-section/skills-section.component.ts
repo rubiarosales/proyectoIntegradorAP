@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Habilidades } from '../model/habilidades';
 import { HabilidadesService } from '../servicios/habilidades.service';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+import { PortfolioServiceService } from '../servicios/portfolio.service';
 import { TokenService } from '../servicios/token.service';
 
 

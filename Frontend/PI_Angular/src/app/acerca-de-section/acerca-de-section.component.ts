@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from '../model/persona';
 import { persona } from '../model/persona.model';
 import { PersonaService } from '../servicios/persona.service';
-import { PortfolioServiceService } from '../servicios/portfolio-service.service';
+import { PortfolioServiceService } from '../servicios/portfolio.service';
 import { TokenService } from '../servicios/token.service';
 
 @Component({
