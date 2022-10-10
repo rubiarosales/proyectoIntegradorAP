@@ -1,9 +1,9 @@
 export class Proyecto {
     id?: number;
-    titulo!: string;
-    fecha!: string;
-    url_img!: string;
-    url_proyecto!: string;
+    titulo: string;
+    fecha: string;
+    url_img: string;
+    url_proyecto: string;
 
     constructor(
         titulo: string,
