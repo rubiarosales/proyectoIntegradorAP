@@ -1,26 +1,13 @@
 <!-- <div class="skills-section">
-    <button class="boton-edicion" aria-label="editar">
-        <img src="assets/img/edit_icon.png" alt="Icono de edición">
-    </button>
-    <h2 class="skill-title section-titles">HABILIDADES</h2>
-    <div class="skill-container">
-        <div *ngFor="let skill of skillList" class="skill-item-container">
-            <h3 class="skill-name">{{skill.skill}}</h3>
-            <h4 class="skill-level">{{skill.nivelSkill}}</h4>
-            <div class="skill-graphic"></div>
-        </div>
-
-    </div>
-</div> -->
-<div class="skills-section">
     <h2 class="skill-title section-titles">HABILIDADES</h2>
     <button class="btn-add" type="button" routerLink="/agregarSkill" *ngIf="isLogged">Agregar (+)</button>
     <div class="skill-container">
         <div *ngFor="let habilidad of hab" class="skill-item-container">
-            <button class="boton-edicion" routerLink="/editarSkill/{{habilidad.id}}" aria-label="editar" *ngIf="isLogged" >
+            <button class="boton-edicion" routerLink="/editarSkill/{{habilidad.id}}" aria-label="editar"
+                *ngIf="isLogged">
                 <img src="assets/img/edit_icon.png" alt="Icono de edición">
             </button>
-            <button class="boton-eliminar" (click)="deleteSkill(habilidad.id)" aria-label="eliminar" *ngIf="isLogged" >
+            <button class="boton-eliminar" (click)="deleteSkill(habilidad.id)" aria-label="eliminar" *ngIf="isLogged">
                 <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
             </button>
             <h3 class="skill-name">{{habilidad.habilidad}}</h3>
@@ -28,5 +15,42 @@
             <div class="skill-graphic"></div>
         </div>
 
+    </div>
+</div> -->
+
+
+<div class="skills-section">
+    <h2 class="skill-title section-titles">HABILIDADES</h2>
+    <button class="btn-add" type="button" routerLink="/agregarSkill" *ngIf="isLogged">Agregar (+)</button>
+    <div class="skill-container">
+        <div *ngFor="let habilidad of hab" class="skill-item-container">
+            <button class="boton-edicion" routerLink="/editarSkill/{{habilidad.id}}" aria-label="editar"
+                *ngIf="isLogged">
+                <img src="assets/img/edit_icon.png" alt="Icono de edición">
+            </button>
+            <button class="boton-eliminar" (click)="deleteSkill(habilidad.id)" aria-label="eliminar" *ngIf="isLogged">
+                <img src="assets/img/delete_icon.png" alt="Icono de eliminar">
+            </button>
+            <circle-progress 
+                [percent]="(habilidad.nivel)"
+                [radius]="150" 
+                [unitsFontSize]="'15'"
+                [unitsColor]="'#ffffff66'"
+                [title]="(habilidad.nivel).toString()"
+                [titleColor]="'#A0BCC7'"
+                [titleFontSize]="'40'"
+                [showTitle]="true"
+                [subtitle]="habilidad.habilidad"
+                [subtitleFontSize]="'30'"
+                [subtitleColor]="'#FFFFFF'"
+                [showSubtitle]="true"
+                [outerStrokeWidth]="15" 
+                [innerStrokeWidth]="5"
+                [outerStrokeColor]="'#A0BCC7'" 
+                [innerStrokeColor]="'#ffffff66'" 
+                [animation]="true"
+                [animationDuration]="4000">
+            </circle-progress>
+        </div>
     </div>
 </div>

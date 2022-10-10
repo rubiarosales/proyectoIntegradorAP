@@ -27,17 +27,17 @@ public class PersonaController {
     @Autowired
     ImpPersonaService ipersonaService;
 
-  // @GetMapping("/traer")
-  //  public List<Persona> getPersona() {
-  //      return ipersonaService.listaPersona();
-   // }
-    
-      @GetMapping("/traer")
+    /*@GetMapping("/traer")
+    public List<Persona> getPersona() {
+        return ipersonaService.listaPersona();
+    } */
+
+    @GetMapping("/traer")
     public ResponseEntity<List<Persona>> listaPersona() {
         List<Persona> lista = ipersonaService.listaPersona();
         return new ResponseEntity(lista, HttpStatus.OK);
     }
-
+   /*AUNQUE NO LO UTILIZO PREFIERO DEJARLO POR SI ACASO*/
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona) {
@@ -54,6 +54,7 @@ public class PersonaController {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
 
+    /*AUNQUE NO LO UTILIZO PREFIERO DEJARLO POR SI ACASO*/
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable long id) {
@@ -64,7 +65,9 @@ public class PersonaController {
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody dtoPersona dtoPersona) {
+        
         Persona persona = ipersonaService.getOne(id).get();
+        
         persona.setNombre(dtoPersona.getNombre());
         persona.setApellido(dtoPersona.getApellido());
         persona.setTitulo(dtoPersona.getTitulo());

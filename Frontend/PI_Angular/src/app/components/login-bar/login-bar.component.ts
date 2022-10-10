@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CargarScriptService } from '../../servicios/cargar-script.service';
 import { PortfolioServiceService } from '../../servicios/portfolio.service';
 import { TokenService } from '../../servicios/token.service';
 
@@ -13,7 +12,7 @@ export class LoginBarComponent implements OnInit {
 
   isLogged=false;
 
-  constructor(private datosPortfolio:PortfolioServiceService, private script:CargarScriptService, private router:Router, private tokenService: TokenService) { }
+  constructor(private datosPortfolio:PortfolioServiceService, private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){

@@ -15,6 +15,7 @@ export class SkillsSectionComponent implements OnInit {
 
   hab: Habilidades[] = [];
   skillList: any;
+ 
 
   constructor(private datosPortfolio: PortfolioServiceService, private tokenService: TokenService, private habilidadesService: HabilidadesService, private router: Router) { }
   isLogged = false;

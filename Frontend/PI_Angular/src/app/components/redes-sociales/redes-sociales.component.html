@@ -1,20 +1,15 @@
-
-
-
-<div class="social-section">
-    <div class="social-bar">
-        <button class="cerrarMenu-responsive" aria-label="abrir menu">
-            <img src="assets/img/close_icon.svg" alt="Menu responive">
-        </button>
-        <a *ngFor="let redes of red" [href]="redes.url_red" target="_blank" class="{{redes.nombre}}">
-            <img [src]="redes.url_logo" alt="{{redes.nombre}}" class="twitter-logo">
-            <p class="nombre-redes">{{redes.nombre}}</p>
-        </a>
-
-
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" id="btn-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngFor="let redes of red" >
+            <a class="nav-link {{redes.nombre}} " aria-current="page" [href]="redes.url_red" target="_blank">{{redes.nombre}}</a>
+          </li>
+        </ul>
+      </div>
+      
     </div>
-    <button class="abrirMenu-responsive" aria-label="abrir menu">
-        <img src="assets/img/bars-solid.svg" alt="Menu responive">
-    </button>
-    <app-login-bar></app-login-bar>
-</div>
+  </nav>

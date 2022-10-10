@@ -31,7 +31,7 @@ import { EditarSkillComponent } from './skills-section/editar-skill/editar-skill
 import { NuevoProyectoComponent } from './proyect-section/nuevo-proyecto/nuevo-proyecto.component';
 import { EditarProyectoComponent } from './proyect-section/editar-proyecto/editar-proyecto.component';
 import { EditarPersonaComponent } from './acerca-de-section/editar-persona/editar-persona.component';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,8 @@ import { EditarPersonaComponent } from './acerca-de-section/editar-persona/edita
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({    })
   ],
   providers: [PortfolioServiceService,CargarScriptService, interceptorProvider],
   bootstrap: [AppComponent]

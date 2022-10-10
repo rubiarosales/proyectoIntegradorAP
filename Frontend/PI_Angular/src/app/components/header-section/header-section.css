@@ -35,46 +35,18 @@
     color:var(--color-texto-secundario);
     letter-spacing: 0.5rem
 }
-.social-section{
-    width: 60%;
-    height:var(--HeaderFooter-Size);
+
+.menu{
+    width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-.social-bar {
-    margin: 0 2rem 0 0;
-
 }
 .social-bar img{
     align-items: baseline;
 
 }
-.social-section img {
-    height: 3.5rem;
-    width: 3.5rem;
-    margin: 0.5rem;
-    padding: 0;
-}
-.login-bar img{
-    height: 5.5rem;
-    width: 5.5rem;
-}
-.abrirMenu-responsive{
-    display: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-.nombre-redes{
-    display: none;
-}
-.cerrarMenu-responsive{
-    display: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
+
 .login-logo{
     cursor: pointer;
 }
@@ -144,77 +116,7 @@
         font-size: 1.3rem;
         letter-spacing: 0.3rem
     }
-    .social-section{
-        width: 40%;
-        height: var(--HeaderFooter-Size); 
-        display: flex;
-        justify-content: flex-end;
-        align-items:center;
-        z-index: 1000;
-    }
-    .social-bar {
-        margin: 0;
-        position: absolute;
-        width: 40%;
-        max-width: 18rem;
-        top: 0;
-        right: 0rem;
-        display:none;
-        flex-direction: column;
-        background-color: var(--color-primario);
-        z-index: 1000;
-    }
-    .social-bar a{
-        height: var(--HeaderFooter-Size); 
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    .cerrarMenu-responsive{
-        display: flex;
-        padding: 0;
-    }
-    .social-bar :first-child{
-        align-self: flex-end;
-    }
-    .menu-abierto{
-        display: flex;
-        animation-duration: 0.8s;
-        animation-name: abriendo-menu;
-    }
-    .nombre-redes{
-        display: flex;
-        color: var(--color-texto-secundario);
-        font-size: 1.3rem;
-        letter-spacing: 0.3rem;
-        margin-left: 2rem;  
-    }
-    .social-section img {
-        height: 3.5rem;
-        width: 3.5rem;
-        padding: 0;
-    }
-    .login-bar img{
-        height: 3.5rem;
-        width: 3.5rem;
-    }
-    .abrirMenu-responsive{
-        display: flex;
-    }
-    .abrirMenu-responsive img{
-        height: 3rem;
-        width: 3rem
-    }
-    .cerrarMenu-responsive img{
-        margin:1.25rem 1rem 1.25rem 0;
-        height: 2.5rem;
-        width: 2.5rem
-    }
-    @keyframes abriendo-menu {
-        0%{width:0;}
-        100%{width:40%;}
-    }
+    
 }
 @media only screen and (max-width: 400px){
     :root{
@@ -237,46 +139,5 @@
 
     .nombre_curso{
         display: none;
-    }
-    .social-section{
-        width: 40%;
-        max-width: 15rem;
-        height: var(--HeaderFooter-Size); 
-        display: flex;
-        justify-content: flex-end;
-        align-items:center;
-    }
-    .social-bar {
-        width: 70%;
-        max-width: 15rem;
-    }
-    .social-bar a{
-        height: var(--HeaderFooter-Size); 
-        align-items: center;
-    }
-    .cerrarMenu-responsive{
-        height: var(--HeaderFooter-Size); 
-    }
-    .nombre-redes{
-        font-size: 1.2rem;
-        letter-spacing: 0.2rem;
-        margin-left: 1.5rem;  
-    }
-    .social-section img {
-        height: 3rem;
-        width: 3rem;
-    }
-    .login-bar img{
-        margin: 0 0.2rem 0 0;
-    }
-
-    .cerrarMenu-responsive img{
-        margin:1rem 1rem 1rem 0;
-        height: 2rem;
-        width: 2rem
-    }
-    @keyframes abriendo-menu {
-        0%{width:0;}
-        100%{width: 70%;}
     }
 }
