@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/proyecto-final",
+    "public": "dist/pi-angular",
     "ignore": [
       "firebase.json",
       "**/.*",
