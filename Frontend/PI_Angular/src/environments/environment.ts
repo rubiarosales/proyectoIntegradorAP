@@ -4,8 +4,7 @@
 
 export const environment = {
   production: true,
-  // URL: 'http://localhost:8080/'
-  URL: 'https://backend-ap-rr.herokuapp.com/'
+  URL: 'http://localhost:8080/'
 };
 
 /*
