@@ -13,7 +13,7 @@ export class ProyectoService {
   constructor(private http:HttpClient) {}
   
   public listaProyecto(): Observable<Proyecto[]> {
-    return this.http.get<Proyecto[]>(this.proyURL+'traer/');
+    return this.http.get<Proyecto[]>(this.proyURL+'traer');
   }
   
   public detail (id:number): Observable<Proyecto>{

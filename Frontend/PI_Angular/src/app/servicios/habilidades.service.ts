@@ -13,7 +13,7 @@ export class HabilidadesService {
   constructor(private http:HttpClient) {}
   
   public listaHabilidades(): Observable<Habilidades[]> {
-    return this.http.get<Habilidades[]>(this.habURL+'traer/');
+    return this.http.get<Habilidades[]>(this.habURL+'traer');
   }
   
   public detail (id:number): Observable<Habilidades>{

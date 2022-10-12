@@ -13,7 +13,7 @@ expURL = environment.URL+'experiencia/';
 constructor(private http:HttpClient) {}
 
 public listaExperiencia(): Observable<Experiencia[]> {
-  return this.http.get<Experiencia[]>(this.expURL+'traer/');
+  return this.http.get<Experiencia[]>(this.expURL+'traer');
 }
 
 public detail (id:number): Observable<Experiencia>{

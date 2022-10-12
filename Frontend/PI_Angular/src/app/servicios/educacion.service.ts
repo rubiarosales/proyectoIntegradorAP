@@ -13,7 +13,7 @@ export class EducacionService {
   constructor(private http:HttpClient) {}
   
   public listaEducacion(): Observable<Educacion[]> {
-    return this.http.get<Educacion[]>(this.eduURL+'traer/');
+    return this.http.get<Educacion[]>(this.eduURL+'traer');
   }
   
   public detail (id:number): Observable<Educacion>{
