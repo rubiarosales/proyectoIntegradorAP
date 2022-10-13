@@ -23,8 +23,8 @@ export class RedesSocialesComponent implements OnInit {
     isLogged=false;
 
     ngOnInit(): void {
-    if (this.tokenService.getToken()){
       this.cargarRedes();
+    if (this.tokenService.getToken()){
       this.isLogged=true;
     }else{
       this.isLogged=false;
