@@ -23,7 +23,7 @@
     --fontsize-titulos-responsive-XL: 4rem;
     --fontsize-subtitulos-responsive-XL: 3.5rem;
     --fontsize-contenido-responsive-XL: 2.5rem;
-    --HeaderFooter-Size: 7rem;
+    /* --HeaderFooter-Size: 7rem; */
 }
 .btn-add{
     font-size: 1.3rem;
@@ -100,9 +100,9 @@
     }
 /* ESCRITORIO */
 @media only screen   and (max-width: 769px){
-    :root{
+    /* :root{
         --HeaderFooter-Size: 5rem;
-    }
+    } */
 
     .section-titles{
         font-size: var(--fontsize-titulos-responsive);
