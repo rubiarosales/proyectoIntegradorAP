@@ -1,30 +1,31 @@
 /* (MOBILE FIRST) */
 /* ESTILOS DEL BANNER */
-.banner-container{
+/* .banner-container{
     background-color: var(--color-secundario);
     position: relative;
-    margin-top: var(--HeaderFooter-Size);
     width: 100%;
-    height: 35vh;
+    height: 50vh;
     max-height: 600px;
+} */
+#carouselExampleControls{
+    margin-top: 50px;
+    /* max-height: 600px; */
 }
-.banner-img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    object-position: 80% 80%;
-    z-index: 500;
-}
+
 
 /* ESCRITORIO */
 /* ESTILOS DEL BANNER */
 @media only screen   and (min-width: 769px){
-    .banner-container{
+    /* .banner-container{
         margin-top: var(--HeaderFooter-Size);
         height: 45vh;
     }
     .banner-img{
         object-position: 80% 75%;
+    } */
+    #carouselExampleControls{
+        margin-top: 70px;
+        /* max-height: 600px; */
     }
+
 }
